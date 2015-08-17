@@ -1,0 +1,43 @@
+10
+
+dir
+157718
+svn+ssh://svn.naehas.com/home/svn/repository/stores/naehasstore/trunk/angular/app/scripts/modules
+svn+ssh://svn.naehas.com/home/svn/repository
+
+
+
+2015-05-21T13:34:09.981260Z
+157639
+arpita
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3e86644e-8524-0410-b64b-e7b6ac602746
+
+admin
+dir
+
+home
+dir
+
+management
+dir
+
+tactic
+dir
+
+user
+dir
+
