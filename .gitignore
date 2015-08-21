@@ -24,3 +24,9 @@ app/scripts/modules/admin/.svn/entries
 app/scripts/modules/user/.svn/entries
 
 app/scripts/vendor/.svn/entries
+
+app/bower_components
+
+node_modules
+
+Documents
