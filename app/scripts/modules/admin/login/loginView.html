@@ -1,7 +1,18 @@
 <!-- container -->
-<div>
-<b> Hello! LOGIN PAGE UNDER CONSTRUCTION !!! </b>
-</div><!-- container -->
-
-
-
+<div class="container-fluid ">
+	<div class="container login-container">
+	    <p class="heading-desc text-center">Sign in to continue to Gmail</p>
+	    <form class="form-signin" name="loginForm" ng-submit="login(loginForm.$valid)">
+	    	<img src="img/logo.jpg" class="logo-img">
+	        <input type="email" class="form-control" placeholder="Email" autofocus ng-model="loginRequest.username" required ng-pattern="/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/">
+	        <input type="password" class="form-control" placeholder="Password" required name="password" ng-model="loginRequest.password">
+	        <button class="btn btn-block signin" type="submit" ng-disabled="!loginForm.$valid">Sign in</button>
+	        <div class="login-btn">
+	        	<a href="" class="pull-right help">Need help? </a>
+	        	<span class="clearfix"></span>
+			</div>
+	    </form>
+	    <a href="" class="text-center account-creation">Create account </a>
+    </div>
+</div>
+<!-- container -->
