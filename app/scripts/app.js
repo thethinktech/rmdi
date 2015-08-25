@@ -3,13 +3,13 @@
 define([
     'appcommons',
     'routes',
-    'interceptor'
-    //'mockModule'
+    'interceptor',
+    'mockModule'
 ], function(angularAMD, routes,interceptor) {
     // Declare app level module which depends on views, and components
     var app = angular.module('naehasstore', [
         'ngRoute',
-        //'mockModule',
+        'mockModule',
         'directives',
         'filters',
         'services',

@@ -70,8 +70,8 @@
             <div class="row table-item" ng-repeat="user in usersList">
               <div class="col-xs-5"><img src="img/profile.png" alt=""> <span ng-bind="::user.name"></span></div>
               <div class="col-xs-2 text-center" ng-bind="::user.status"></div>
-              <div class="col-xs-3 text-center" ng-bind="::user.lastModified"></div>
-              <div class="col-xs-1 text-center"></div>
+              <div class="col-xs-3 text-center" ng-bind="::user.lastModifiedDate |  formatDate:'MMM dd, yyyy'"></div>
+              <div class="col-xs-1 text-center" ng-bind="::user.role"></div>
               <div class="col-xs-1 text-center"></div>
             </div>
           </div>
