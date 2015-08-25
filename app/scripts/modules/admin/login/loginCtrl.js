@@ -1,17 +1,14 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('LoginCtrl',['$scope','UTILS',
-	function ($scope,UTILS) {
+  app.controller('LoginCtrl',['$scope','$location','UTILS',
+	function ($scope,$location,UTILS) {
 
 		$scope.loginRequest = {};
-		// UTILS.setInSession('test','value');
-		// console.log(UTILS.getFromSession('test'));
-		// console.log(UTILS.encryptCredential('12345'));
 
 		$scope.login = function(value){
 			if(value){
-				alert("Login Successful");
+				$location.path('dashboard');
 			}
 		};
 

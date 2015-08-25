@@ -40,6 +40,14 @@ module.exports = function(grunt) {
               exclude: ['appcommons']
             },
             {
+              name: 'modules/admin/dashboard/dashboardCtrl',
+              exclude: ['appcommons']
+            },
+            {
+              name: 'modules/admin/userManagement/userManagementCtrl',
+              exclude: ['appcommons']
+            },
+            {
               name: 'modules/user/userCtrl',
               exclude: ['appcommons']
             }

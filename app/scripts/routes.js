@@ -9,6 +9,18 @@ define(['angularAMD'],
             controllerUrl: 'modules/admin/login/loginCtrl'
         }));
 
+        $routeProvider.when('/dashboard', angularAMD.route({
+            templateUrl: 'scripts/modules/admin/dashboard/dashboardView.html',
+            controller: 'DashboardCtrl',
+            controllerUrl: 'modules/admin/dashboard/dashboardCtrl'
+        }));
+
+        $routeProvider.when('/usermanagement', angularAMD.route({
+            templateUrl: 'scripts/modules/admin/userManagement/userManagementView.html',
+            controller: 'UserManagementCtrl',
+            controllerUrl: 'modules/admin/userManagement/userManagementCtrl'
+        }));
+
         $routeProvider.when('/signup', angularAMD.route({
             templateUrl: 'scripts/modules/admin/signupFormBuilderView.html',
             controller: 'SignupFormBuilderCtrl',
