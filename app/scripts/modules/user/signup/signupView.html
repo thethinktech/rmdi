@@ -1,0 +1,95 @@
+<div class="container-fluid">
+    <div class="container custom-container reg-container">
+		<div class="logo-name pull-left">RMDI</div>
+		<div class="reg-name pull-right">USER REGISTRATION</div>
+    </div>
+</div>
+
+<div class="container-fluid reg-mid-fluid">
+	<div class="container custom-container reg-mid-container">
+   		<div class="drop-area register-area">
+      		<p class="text-center"> <img src="img/camera.png" alt=""></p>
+        	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            	<div class="panel panel-default">
+                	<div class="panel-heading" role="tab" id="heading1" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                    	<h4 class="panel-title">
+                      	  <span class="collapsed">Mandatory Fields* <i class="fa fa-plus pull-right"></i></span>
+                    	</h4>
+               		</div>
+	                <div ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
+	                    <div id="collapse1" class="panel-collapse in" role="tabpanel" aria-labelledby="heading1">
+	                        <div class="panel-body input-panel">
+	                            <div class="reg-top">
+                                    <render-element ng-repeat="customization in manadatoryFieldsList" customization="customization"> 
+                                    </render-element>
+	                            	<!-- <input type="text" class="form-control" placeholder="username">
+	                            	<input type="text" class="form-control" placeholder="password">
+	                           		<input type="text" class="form-control" placeholder="first name">
+	                            	<input type="text" class="form-control" placeholder="last name">
+	                            	<input type="text" class="form-control" placeholder="role">
+	                            	<input type="text" class="form-control" placeholder="client id"> -->
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+            	</div>
+        	</div>
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading1" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        <h4 class="panel-title">
+                            <span class="collapsed">Additional <i class="fa fa-plus pull-right"></i></span>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse in" role="tabpanel" aria-labelledby="heading2">
+                        <div class="panel-body">
+                         	<div class="reg-top">
+                                <render-element ng-repeat="customization in additionalFieldsList" customization="customization"> 
+                                </render-element>
+                                <!-- <input type="text" class="form-control" placeholder="sin number">
+                                <input type="text" class="form-control" placeholder="DOB">
+                                <input type="text" class="form-control" placeholder="email">
+                                <input type="text" class="form-control" placeholder="phone number">
+                                <input type="text" class="form-control" placeholder="address"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading3" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        <h4 class="panel-title">
+                            <span class="collapsed">Roles* <i class="fa fa-plus pull-right"></i></span>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse in" role="tabpanel" aria-labelledby="heading3">
+                        <div class="panel-body">
+                        	<div class="reg-top">
+                            	<input type="text" class="form-control roles-search" placeholder="search">
+                        	</div>
+
+	                        <div class="reg-top search-result">
+	                           <div class="bubble">
+	                            	<div class="cross"><img src="img/cross.png" alt=""></div>
+	                           </div>
+	                            <div class="bubble">
+	                            	<div class="cross"><img src="img/cross.png" alt=""></div>
+	                           </div>
+	                        	<div class="clearfix"></div>
+	                        </div>
+
+	                       	<div class="reg-top">
+	                           <button class="btn btn-signup">Sign up</button>
+	                           <p class="text-center pfirst">Already go an account?</p>
+	                           <p class="text-center"><a href="">Sign in here</a></p>
+	                       </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

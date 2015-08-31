@@ -50,6 +50,10 @@ module.exports = function(grunt) {
             {
               name: 'modules/user/userCtrl',
               exclude: ['appcommons']
+            },
+            {
+              name: 'modules/user/signup/signupCtrl',
+              exclude: ['appcommons']
             }
           ]
         }

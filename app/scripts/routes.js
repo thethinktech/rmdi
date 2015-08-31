@@ -33,6 +33,12 @@ define(['angularAMD'],
             controllerUrl: 'modules/user/userCtrl'
         }));
 
+        $routeProvider.when('/signup', angularAMD.route({
+            templateUrl: 'scripts/modules/user/signup/signupView.html',
+            controller: 'SignupCtrl',
+            controllerUrl: 'modules/user/signup/signupCtrl'
+        }));
+
         $routeProvider.otherwise({redirectTo: '/login'});
 	}]
 });
