@@ -8,7 +8,7 @@ define(['angular','common/header/headerDirective','common/footer/footerDirective
 	module.directive('appHeader',headerDirective);
 	module.directive('appFooter',footerDirective);
 
-	module.directive('renderElement',function($compile){
+	module.directive('renderElement',['$compile',function($compile){
 		return{
 			restrict : 'E',
 			scope : {
@@ -56,10 +56,10 @@ define(['angular','common/header/headerDirective','common/footer/footerDirective
 
 				}
 				template = $compile(template)(scope);
-				element.replaceWith(template);
+				$(element).replaceWith(template);
 			}
 		}
-	});
+	}]);
 
 	return module;
 });

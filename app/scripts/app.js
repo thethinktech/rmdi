@@ -7,7 +7,7 @@ define([
     'mockModule'
 ], function(angularAMD, routes,interceptor) {
     // Declare app level module which depends on views, and components
-    var app = angular.module('naehasstore', [
+    var app = angular.module('rmdi', [
         'ngRoute',
         'mockModule',
         'directives',

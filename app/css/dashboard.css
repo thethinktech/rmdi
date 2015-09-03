@@ -11,7 +11,7 @@
     background: #fff
 }
 .noPad{
-     padding:0
+     padding:0;
 
 }
 .dash-left{
@@ -142,7 +142,7 @@ img.user-logo {
     padding-left: 0
 }
 .left-btns li{
-     height:25px;
+      height:25px;
     line-height: 25px;
     padding-left: 20px;
     margin-top: 10px;
@@ -168,6 +168,11 @@ img.user-logo {
 }
 .left-btns li.active i{
     color:#D04534;
+}
+.left-btns a{
+     text-decoration: none;
+    color:#888;
+    font-size: 15px
 }
 
 .table-item.table-head{
@@ -275,3 +280,169 @@ img.user-logo {
 
 }
 
+
+/* USER MANAGEMENT ENDS */
+
+/* DASHBOARD */
+
+.left-home{
+    font-size: 28px;
+    margin-top: 5px;
+}
+.crumb{
+    list-style: none;
+    margin-top: 12px;
+}
+.crumb li {
+    display: inline;
+    font-size: 18px;
+    color:#888
+}
+.crumb li a{
+   text-decoration: none
+}
+.seperator{
+         font-size: 14px !important;
+    margin-right: 10px;
+    color:#000
+}
+.sub-menu{
+     margin-top:0px;
+    list-style: none;
+    padding-left: 5px
+}
+.dash-main{
+     background: #fff
+}
+.dash-right-row {
+    border-top: 2px solid #F5F1F1;
+       margin-top: 40px;
+    width: 100%;
+    float: left;
+}
+.row-title{
+        float: left;
+    background: #fff;
+    margin-top: -10px;
+    padding-right: 20px;
+    font-weight: bold;
+    color: #A7A5A5
+}
+.dash-item {
+        margin-top: 30px;
+    width: 100%;
+    float: left;
+}
+.dash-right-section{
+     padding-right: 10px;
+    height: 600px;
+    overflow-y: auto;
+
+}
+.dash-number {
+    font-weight: bold;
+    font-size: 20px;
+}
+.dash-description {
+    font-size: 16px;
+    color: #8A8A8A;
+    border-bottom: 5px solid #11C3BD;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+}
+.dash-color-block {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+.color-circle {
+    background: #ccc;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    float: left;
+    margin-top: 5px;
+}
+
+.color-red{
+     background: #d3462f
+}
+.color-orange{
+     background: #f37517
+}
+.color-blue{
+     background: #00b3a4
+}
+.color-number {
+    float: left;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.color-text{
+    float:left;
+        font-size: 16px;
+    color: #8A8A8A;
+}
+
+.no-border{
+    border: 0
+}
+.dash-sections{
+     height:70px;
+    background: #fff;
+        border-bottom: 1px solid #E6E4E4;
+        border-top: 1px solid #E6E4E4;
+}
+.icons-left{
+     width: 75%;
+    float: left;
+        padding-left: 10px;
+        border-right: 1px solid #ccc;
+}
+.icon-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4C4A4A;
+}
+.icon-desc {
+    margin-top: 5px;
+    color: #696767;
+}
+
+
+.icons-item{
+     margin-top: 50px
+}
+
+.icon-dash-right{
+    margin-right: 5px;
+    padding-left: 20px;
+
+}
+.noMargin-right{
+     margin-right: 0;
+    margin-left: 0;
+    width: auto;
+}
+.nomarging{
+ margin:0;
+    width:auto
+}
+.rs_mid{
+ margin-top: 20px
+}
+.btn_head img {
+    width: 20px;
+}
+.btn_head {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.left-btns-dash li{
+     height:auto
+}
+.filter-date{
+     margin-top: 0
+}

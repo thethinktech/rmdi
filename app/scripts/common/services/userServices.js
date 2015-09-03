@@ -9,12 +9,12 @@ define(['angular'], function (angular) {
         };
 
 	    //Get all manadatory signup fields
-		this.getManadatoryFields = function(payLoadData){
+		this.getManadatoryFields = function(){
 			return $http.get('/admin/action/user/signup/manadatory/list');
 		};
 
 		//Get all additional signup fields
-		this.getAdditionalFields = function(payLoadData){
+		this.getAdditionalFields = function(){
 			return $http.get('/admin/action/user/signup/additional/list');
 		};
  }];

@@ -2,7 +2,7 @@
 
 define(['angular'], function (angular) {
 
-	return function($httpBackend) {
+	return ['$httpBackend', function($httpBackend) {
 
 		var usersList = [
 			{
@@ -188,5 +188,5 @@ define(['angular'], function (angular) {
     	$httpBackend.whenGET('/admin/action/user/signup/additional/list').respond(additionalFieldsList);
 
       	$httpBackend.whenGET(/scripts\//).passThrough();
-    };
+    }];
 });

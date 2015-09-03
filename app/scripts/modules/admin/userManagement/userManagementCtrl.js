@@ -1,10 +1,14 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('UserManagementCtrl',['$scope', 'ADMIN',
-	function ($scope,ADMIN) {
+  app.controller('UserManagementCtrl',['$scope', '$location', 'ADMIN',
+	function ($scope,$location,ADMIN) {
 
 		$scope.usersList = [];
+
+		$scope.goToUrl = function(url){
+			$location.path(url);
+		};
 
 		var init = function(){
 			ADMIN.getUsers()
