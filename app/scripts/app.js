@@ -14,7 +14,8 @@ define([
         'filters',
         'services',
         'ngSanitize',
-        'angular-md5'
+        'angular-md5',
+        'ngDraggable'
     ]);
 
     app.config(routes);

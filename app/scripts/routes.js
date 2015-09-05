@@ -3,42 +3,51 @@ define(['angularAMD'],
     'use strict';
 	return ['$routeProvider', function($routeProvider) {
 
+        //Client Admin Module Routes
         $routeProvider.when('/login', angularAMD.route({
-            templateUrl: 'scripts/modules/admin/login/loginView.html',
+            templateUrl: 'scripts/modules/clientAdmin/login/loginView.html',
             controller: 'LoginCtrl',
-            controllerUrl: 'modules/admin/login/loginCtrl'
+            controllerUrl: 'modules/clientAdmin/login/loginCtrl'
         }));
 
         $routeProvider.when('/dashboard', angularAMD.route({
-            templateUrl: 'scripts/modules/admin/dashboard/dashboardView.html',
+            templateUrl: 'scripts/modules/clientAdmin/dashboard/dashboardView.html',
             controller: 'DashboardCtrl',
-            controllerUrl: 'modules/admin/dashboard/dashboardCtrl'
+            controllerUrl: 'modules/clientAdmin/dashboard/dashboardCtrl'
         }));
 
         $routeProvider.when('/usermanagement', angularAMD.route({
-            templateUrl: 'scripts/modules/admin/userManagement/userManagementView.html',
+            templateUrl: 'scripts/modules/clientAdmin/userManagement/userManagementView.html',
             controller: 'UserManagementCtrl',
-            controllerUrl: 'modules/admin/userManagement/userManagementCtrl'
+            controllerUrl: 'modules/clientAdmin/userManagement/userManagementCtrl'
+        }));
+
+        $routeProvider.when('/profilebuilder', angularAMD.route({
+            templateUrl: 'scripts/modules/clientAdmin/profileBuilder/profileBuilderView.html',
+            controller: 'ProfileBuilderBuilderCtrl',
+            controllerUrl: 'modules/clientAdmin/profileBuilder/profileBuilderCtrl'
         }));
 
         $routeProvider.when('/signup', angularAMD.route({
-            templateUrl: 'scripts/modules/admin/signupFormBuilderView.html',
-            controller: 'SignupFormBuilderCtrl',
-            controllerUrl: 'modules/admin/login/signupFormBuilderCtrl'
+            templateUrl: 'scripts/modules/clientAdmin/signup/signupView.html',
+            controller: 'SignupCtrl',
+            controllerUrl: 'modules/clientAdmin/signup/signupCtrl'
         }));
 
+        //User Module Routes
         $routeProvider.when('/user', angularAMD.route({
             templateUrl: 'scripts/modules/user/userView.html',
             controller: 'UserCtrl',
             controllerUrl: 'modules/user/userCtrl'
         }));
 
-        $routeProvider.when('/signup', angularAMD.route({
-            templateUrl: 'scripts/modules/user/signup/signupView.html',
-            controller: 'SignupCtrl',
-            controllerUrl: 'modules/user/signup/signupCtrl'
+        //Super Admin Module Routes
+        $routeProvider.when('/superadmin', angularAMD.route({
+            templateUrl: 'scripts/modules/superAdmin/superAdminView.html',
+            controller: 'SuperAdminCtrl',
+            controllerUrl: 'modules/superAdmin/superAdminCtrl'
         }));
-
+        
         $routeProvider.otherwise({redirectTo: '/login'});
 	}]
 });

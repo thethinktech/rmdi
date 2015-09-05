@@ -32,19 +32,23 @@ module.exports = function(grunt) {
             { name: 'app'
             },
             {   
-              name: 'modules/admin/login/loginCtrl',
+              name: 'modules/clientAdmin/login/loginCtrl',
               exclude: ['appcommons']
             },
             {
-              name: 'modules/admin/signupFormBuilder/signupFormBuilderCtrl',
+              name: 'modules/clientAdmin/profileBuilder/profileBuilderCtrl',
               exclude: ['appcommons']
             },
             {
-              name: 'modules/admin/dashboard/dashboardCtrl',
+              name: 'modules/clientAdmin/dashboard/dashboardCtrl',
               exclude: ['appcommons']
             },
             {
-              name: 'modules/admin/userManagement/userManagementCtrl',
+              name: 'modules/clientAdmin/userManagement/userManagementCtrl',
+              exclude: ['appcommons']
+            },
+            {
+              name: 'modules/clientAdmin/signup/signupCtrl',
               exclude: ['appcommons']
             },
             {
@@ -52,7 +56,7 @@ module.exports = function(grunt) {
               exclude: ['appcommons']
             },
             {
-              name: 'modules/user/signup/signupCtrl',
+              name: 'modules/superAdmin/superAdminCtrl',
               exclude: ['appcommons']
             }
           ]

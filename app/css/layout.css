@@ -44,7 +44,7 @@
 
 }
 .logo-right .select:after{
-    content: url('../images/dropdown.png');
+    content: url('../img/dropdown.png');
     color: #fff;
     position:absolute;
         right: 25px;

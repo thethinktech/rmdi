@@ -9,7 +9,8 @@ define(['angular',
     'angularSanitize',
     'bootstrap',
     'store',
-    'angularMd5'
+    'angularMd5',
+    'draggable'
     ], 
     function (angular, angularAMD, angularRoute, angularMocks) {
         'use strict';

@@ -13,11 +13,12 @@ require.config({
 		interceptor: 'interceptor',
 		bootstrap:'vendor/bootstrap',
 		store: '../bower_components/store2/src/store2',
-		angularMd5: '../bower_components/angular-md5/angular-md5'
+		angularMd5: '../bower_components/angular-md5/angular-md5',
+		draggable : '../bower_components/ngDraggable/ngDraggable'        //Ref : https://github.com/fatlinesofcode/ngDraggable
 	},
 	waitSeconds:600,
 	shim: {
-		'angular' : {'exports' : 'angular'},
+		'angular' : { deps: ['jquery'],'exports' : 'angular'},
 		'angularRoute': ['angular'],
 		'angularMocks': {
 			deps:['angular'],
@@ -34,6 +35,9 @@ require.config({
 		},
 		'angularMd5': {
 			deps:['angular']
+		},
+		'ngDraggable': {
+			deps:['angular','jquery']
 		}
 	},
 	priority: [
