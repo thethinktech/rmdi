@@ -1,102 +1,314 @@
-<div class="container-fluid ">
-    <div class="container custom-container title-section">
-        <div class="logo">Client Logo</div>
-        <div class="logo-right">
-            <div class="select">
-                <select name="" id="form-select" class="form-control">
-                    <option value="">Select Form</option>
-                </select>
-            </div>
-            <div class="profile"><i class="fa fa-user"></i> Ashish Rathi</div>
-            <div class="logout"><a href="">Logout</a></div>
-        </div>
-	</div>
-</div>
-
-  	<div class="container-fluid">
-        <div class="container custom-container mid-section">
-            <div class="drop-items">
-                <p class="drag-title">Drag and Drop Fields</p>
-                <ul>
-		            <li ng-repeat="obj in draggableObjects">
-		            	<div ng-drag="true" ng-drag-data="obj" data-allow-transform="true">
-			                <input type="text" class="form-control" placeholder="{{obj.placeholder}}" />
-		            	</div>
-		            </li>
-		        </ul>
-                <div class="btn-group btn-drop">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Option <span class="caret"></span>
-                    </button>
-	                <ul class="dropdown-menu">
-	                    <li><a href="#">Action</a></li>
-	                    <li><a href="#">Another action</a></li>
-	                    <li><a href="#">Something else here</a></li>
-	                    <li><a href="#">Separated link</a></li>
-	                </ul>
+    <div class="main dash-main">
+    <div class="container-fluid noPad ">
+        <div class="container dash-top">
+            <div class="dash-left"><img src="img/large-logo.png" alt="" class="page-logo"></div>
+            <div class="dash-mid">
+                <div class="input-group search-group">
+                    <input type="text" class="form-control" placeholder="Search Name">
+                    <button class="input-group-addon"><i class="fa fa-search"></i></button>
                 </div>
             </div>
-                
-            <div class="drop-area">
-                <p class="drop-title"><i class="fa fa-user"></i> Create - User Profile</p>
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading1" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                            <h4 class="panel-title">
-                                <span class="collapsed">Mandatory Fields <i class="fa fa-plus pull-right"></i></span>
-                            </h4>
-                        </div>
-                     	<div ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
-                     		<div id="collapse1" class="panel-collapse in" role="tabpanel" aria-labelledby="heading1">
-                     			<div class="panel-body input-panel">
-                     				<div class="inp-sec">
-						          		<div ng-repeat="obj in droppedObjects" ng-drag="false" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)" ng-center-anchor="{{centerAnchor}}">
-						          			<input type="text" class="form-control" placeholder="{{obj.placeholder}}">
-						              			 
-						              		</input>
-						          		</div>
-						        	</div>
-						    	</div>
-				      		</div>
-				      	</div>
+            <div class="dash-right">
+                <div class="profile-right">
+                    <div class="profile-item text-center">Raman</div>
+                    <div class="profile-item text-center"><i class="fa fa-th"></i></div>
+                    <div class="profile-item text-center"><span class="profile-notif"><i class="fa fa-bell"></i></span></div>
+                    <div class="profile-item text-center img-circle profile-img"><img src="img/logo.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid noPad ">
+        <div class="container dash-second">
+            <div class="dash-left"><img src="img/profile.png" alt="" class="user-logo">
+                <h4 class="user-name">UM</h4>
+            </div>
+            <div class="profile-crumb">
+                <div id="bc1" class="btn-group btn-breadcrumb">
+                    <a href="#" class="btn btn-info on">
+                        <div>Setup - Basic</div>
+                    </a>
+                    <a href="#" class="btn btn-info">
+                        <div>Setup - Fields</div>
+                    </a>
+                    <a href="#" class="btn btn-info">
+                        <div>Finalize Profile</div>
+                    </a>
+                    <a href="#" class="btn btn-info">
+                        <div>Validate Profile</div>
+                    </a>
+                    <a href="#" class="btn btn-info">
+                        <div>Publish Profile</div>
+                    </a>
+                </div>
+                <div class="profile_right_btn pull-right">
+                    <button class="btn btn-default btn-sm btn-flat">Validate</button>
+                    <button class="btn btn-warning btn-sm btn-flat">Publish</button>
+                    <button class="btn btn-success btn-sm btn-flat">Save</button>
+                    <button class="btn btn-danger btn-sm btn-flat">Cancel</button>
+                    <button class="btn btn-default btn-sm btn-flat"><i class="fa fa-refresh"></i></button>
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-flat btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-flat btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cog"></i> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading1" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            <h4 class="panel-title">
-                                <span class="collapsed">Additional <i class="fa fa-plus pull-right"></i></span>
-                            </h4>
+    <div class="container-fluid noPad ">
+        <div class="container dash-bottom">
+            <div class="dash-left profile_drags">
+                <div class="btn_head"> Form Controls</div>
+                <ul class="left-btns left-btns-dash">
+                    <li>
+                        <a href=""><img src="img/button.png" alt=""> Buttons</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/grid.png" alt=""> Grid</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/group.png" alt=""> Groups</a>
+                    </li>
+                </ul>
+                <div class="btn_head"> Field Controls</div>
+                <ul class="left-btns left-btns-dash">
+                    <li>
+                        <a href=""><img src="img/text.png" alt=""> Text</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/dropdown.png" alt=""> Drop-downs</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/number.png" alt=""> Numbers</a>
+                    </li>
+                    <li>
+                        <a href=""><img src="img/datetime.png" alt=""> Date/Time</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile-content">
+
+                <!-- PAGE 1 CONTENT STARTS -->
+                <div id="page1" class="show">
+                    <h3>Form Setup</h3>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Form Name</h4></div>
+                        <div class="col-xs-10"><h4>Create New User</h4></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Open Form: </h4></div>
+                        <div class="col-xs-10"><h4>On Click – New Button on User Management</h4></div>
+                    </div>
+                     <div class="row">
+                        <div class="col-xs-2"><h4>Hot Key:      </h4></div>
+                        <div class="col-xs-1"><h4>UM01</h4></div>
+                        <div class="col-xs-2">
+                          <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-flat btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Please Select <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                <!-- PAGE 1 CONTENT ENDS -->
+              
+             
+                <!-- PAGE 2 CONTENT STARTS-->
+                <div id="page2" class="hide">
+                   <h3>Form Setup</h3>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4><strong>Select data input requirements</strong></h4>
                         </div>
-                        <div id="collapse2" class="panel-collapse in" role="tabpanel" aria-labelledby="heading2">
-                            <div class="panel-body">
+                        <div class="col-xs-12 profile_boxes">
+                            <p><label><input type="checkbox"> Single Line </label></p>
+                            <p><label><input type="checkbox"> Multiple Line </label></p>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <h4><strong>Is data input staged? </strong></h4>
+                        </div>
+                        <div class="col-xs-12 profile_boxes">
+                            <p><label><input type="checkbox"> Yes </label></p>
+                            <p><label><input type="checkbox"> No </label></p>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <h4><strong>Is search grid required? </strong></h4>
+                        </div>
+                        <div class="col-xs-12 profile_boxes">
+                            <p><label><input type="checkbox"> Yes </label></p>
+                            <p><label><input type="checkbox"> No </label></p>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <h4><strong>Is search mandatory before data input is enabled? </strong></h4>
+                        </div>
+                        <div class="col-xs-12 profile_boxes">
+                            <p><label><input type="checkbox"> Yes </label></p>
+                            <p><label><input type="checkbox"> No </label></p>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <h4><strong>Select form validation requirements:</strong></h4>
+                        </div>
+                        <div class="col-xs-12 profile_boxes">
+                            <p><label><input type="checkbox"> Validation on Submit </label></p>
+                            <p><label><input type="checkbox"> Explicit Validation </label></p>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <h4><strong>Select form approval options</strong></h4>
+                        </div>
+
+                        <div class="col-xs-12 profile_boxes">
+                            <p><label><input type="checkbox"> No Approval </label></p>
+                            <p><label><input type="checkbox"> Single Approval </label></p>
+                            <p><label><input type="checkbox"> Multiple Approvals </label></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- PAGE 2 CONTENT ENDS-->
+                
+                
+                <!-- PAGE 3 CONTENT STARTS -->
+                <div id="page3" class="hide">
+                    <h3>Form Setup</h3>
+                    <br>
+                    <table class="table table-bordered step3-table">
+                        <thead>
+                            <tr>
+                                <th>Label</th>
+                                <th>Sys. Group</th>
+                                <th>Group Label</th>
+                                <th>Type</th>
+                                <th>Sub Type</th>
+                                <th>Format</th>
+                                <th>Length</th>
+                                <th>Tab Seq.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Created</td>
+                                <td>Header</td>
+                                <td>Basic Data</td>
+                                <td>Date</td>
+                                <td></td>
+                                <td>YYYY-MM-DD</td>
+                                <td></td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>User ID</td>
+                                <td>Header</td>
+                                <td>Basic Data</td>
+                                <td>Text</td>
+                                <td>Short</td>
+                                <td></td>
+                                <td>6</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Prefix</td>
+                                <td>Body</td>
+                                <td>User Info</td>
+                                <td>Drop-down</td>
+                                <td></td>
+                                <td></td>
+                                <td>250</td>
+                                <td>3</td>
+                            </tr>
+                               <tr>
+                                <td>First Name</td>
+                                <td>Body</td>
+                                <td>User Info</td>
+                                <td>Text</td>
+                                <td></td>
+                                <td></td>
+                                <td>250</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- PAGE 3 CONTENT ENDS -->
+               
+               
+                <!-- PAGE 4 CONTENT STARTS -->
+                <div id="page4" class="hide">
+                    <div class="profile-section profile_first">
+                        <h4 class="pull-left">New User Setup</h4>
+                        <button class="btn btn-danger btn-flat btn-sm pull-right">Cancel</button>
+                        <button class="btn btn-info btn-flat  btn-sm pull-right">Submit</button>
+                        <button class="btn btn-success btn-flat  btn-sm pull-right">Save</button>
+                    </div>
+
+                    <p class="profile_labels">Basic Data:</p>
+                    <div class="profile-section">
+                        <div class="row">
+                            <div class="col-md-4 form_item">
+                                Created <img src="img/datetime.png" alt="">
+                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                            </div>
+                            <div class="col-md-4 form_item">
+                                User ID <img src="img/text.png" alt="">
+                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="profile_labels">User Info:</p>
+                    <div class="profile-section">
+                        <div class="row">
+                            <div class="col-md-4 form_item">
+                                Prefix <img src="img/dropdown.png" alt="">
+                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                            </div>
+                            <div class="col-md-4 form_item">
+                                First Name <img src="img/text.png" alt="">
+                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                            </div>
+                            <div class="col-md-4 form_item">
+                                Last Name <img src="img/text.png" alt="">
+                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                            </div>
+                            <div class="col-md-8 form_item">
+                                Email <img src="img/text.png" alt="">
+                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-					<div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="heading3" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            <h4 class="panel-title">
-                                <span class="collapsed">Roles <i class="fa fa-plus pull-right"></i></span>
-                            </h4>
-                        </div>
-                        <div id="collapse3" class="panel-collapse in" role="tabpanel" aria-labelledby="heading3">
-                            <div class="panel-body btn-panel-body">
-                               <div class="save-section">
-                                   <button class="btn save-btn">Sign up</button>
-                               </div>
-                               <div class="save-button-section">
-                                   <div class="btn-item"><i class="fa fa-edit"></i></div>
-                                   <div class="btn-item"><i class="fa fa-trash-o"></i></div>
-                                   <div class="btn-item"><i class="fa fa-save"></i></div>
-                            	</div>
-                        	</div>
-                    	</div>
-                	</div>
-            	</div>
+                <!-- PAGE 4 CONTENT ENDS -->
+
             </div>
-      	</div>
+        </div>
     </div>
+</div>
