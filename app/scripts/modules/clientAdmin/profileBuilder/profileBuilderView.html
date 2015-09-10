@@ -26,25 +26,25 @@
             </div>
             <div class="profile-crumb">
                 <div id="bc1" class="btn-group btn-breadcrumb">
-                    <a href="#" class="btn btn-info on">
+                    <a href class="btn btn-info" ng-class="{'on': currentTab == 1}" ng-click="currentTab=1">
                         <div>Setup - Basic</div>
                     </a>
-                    <a href="#" class="btn btn-info">
+                    <a href class="btn btn-info" ng-class="{'on': currentTab == 2}" ng-click="currentTab=2">
                         <div>Setup - Fields</div>
                     </a>
-                    <a href="#" class="btn btn-info">
+                    <a href class="btn btn-info" ng-class="{'on': currentTab == 3}" ng-click="currentTab=3">
                         <div>Finalize Profile</div>
                     </a>
-                    <a href="#" class="btn btn-info">
+                    <a href class="btn btn-info" ng-class="{'on': currentTab == 4}" ng-click="currentTab=4">
                         <div>Validate Profile</div>
                     </a>
-                    <a href="#" class="btn btn-info">
+                    <a href class="btn btn-info" ng-class="{'on': currentTab == 5}" ng-click="currentTab=5">
                         <div>Publish Profile</div>
                     </a>
                 </div>
                 <div class="profile_right_btn pull-right">
-                    <button class="btn btn-default btn-sm btn-flat">Validate</button>
-                    <button class="btn btn-warning btn-sm btn-flat">Publish</button>
+                    <button class="btn btn-default btn-sm btn-flat" ng-disabled="currentTab != 4">Validate</button>
+                    <button class="btn btn-warning btn-sm btn-flat" ng-disabled="currentTab != 5">Publish</button>
                     <button class="btn btn-success btn-sm btn-flat">Save</button>
                     <button class="btn btn-danger btn-sm btn-flat">Cancel</button>
                     <button class="btn btn-default btn-sm btn-flat"><i class="fa fa-refresh"></i></button>
@@ -54,8 +54,8 @@
                             More <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
+                            <li><a href>Action</a></li>
+                            <li><a href>Another action</a></li>
                         </ul>
                     </div>
 
@@ -107,8 +107,8 @@
             <div class="profile-content">
 
                 <!-- PAGE 1 CONTENT STARTS -->
-                <div id="page1" class="show">
-                    <h3>Form Setup</h3>
+                <div id="page1" class="hide" ng-class="{'show': currentTab == 1}">
+                    <h3>Profile Form Setup</h3>
                     <br>
                     <div class="row">
                         <div class="col-xs-2"><h4>Form Name</h4></div>
@@ -139,7 +139,7 @@
               
              
                 <!-- PAGE 2 CONTENT STARTS-->
-                <div id="page2" class="hide">
+                <div id="page2" class="hide" ng-class="{'show': currentTab == 2}">
                    <h3>Form Setup</h3>
                     <br>
                     <div class="row">
@@ -198,7 +198,7 @@
                 
                 
                 <!-- PAGE 3 CONTENT STARTS -->
-                <div id="page3" class="hide">
+                <div id="page3" class="hide" ng-class="{'show': currentTab == 3}">
                     <h3>Form Setup</h3>
                     <br>
                     <table class="table table-bordered step3-table">
@@ -262,7 +262,7 @@
                
                
                 <!-- PAGE 4 CONTENT STARTS -->
-                <div id="page4" class="hide">
+                <div id="page4" class="hide" ng-class="{'show': currentTab == 4 || currentTab == 5}">
                     <div class="profile-section profile_first">
                         <h4 class="pull-left">New User Setup</h4>
                         <button class="btn btn-danger btn-flat btn-sm pull-right">Cancel</button>

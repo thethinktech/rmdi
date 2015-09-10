@@ -4,7 +4,8 @@ define(['app'], function (app) {
   app.controller('ProfileBuilderBuilderCtrl',['$scope',
 	function ($scope) {
 
-		$scope.droppedObjects = [];
+	$scope.droppedObjects = [];
+	$scope.currentTab = 1;
 	$scope.draggableObjects = [
 	{
 		"name": "email",
@@ -74,18 +75,6 @@ define(['app'], function (app) {
 	}
 	];
 
-	$scope.popItems = [{
-      name: "Number of Characters"
-    }, {
-      name: "Format"
-    }, {
-      name: "Required"
-    }, {
-      name: "Other"
-    }, {
-      name: "Other"
-    }];
-
 	$scope.centerAnchor = true;
     $scope.toggleCenterAnchor = function () {$scope.centerAnchor = !$scope.centerAnchor}
 
@@ -94,14 +83,6 @@ define(['app'], function (app) {
         var index = $scope.droppedObjects.indexOf(data);
         if (index == -1)
         $scope.droppedObjects.push(data);}	
-    };
-
-    $scope.onDragSuccess1=function(data,evt){
-        // console.log("133","$scope","onDragSuccess1", "", evt);
-        // var index = $scope.droppedObjects1.indexOf(data);
-        // if (index > -1) {
-        //     $scope.droppedObjects1.splice(index, 1);
-        // }
     };
 
 	}]);
