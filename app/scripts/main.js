@@ -36,7 +36,7 @@ require.config({
 		'angularMd5': {
 			deps:['angular']
 		},
-		'ngDraggable': {
+		'draggable': {
 			deps:['angular','jquery']
 		}
 	},
