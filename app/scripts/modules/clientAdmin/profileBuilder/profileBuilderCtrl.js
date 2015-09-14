@@ -6,83 +6,68 @@ define(['app'], function (app) {
 
 	$scope.droppedObjects = [];
 	$scope.currentTab = 1;
-	$scope.draggableObjects = [
-	{
-		"name": "email",
-		"placeholder" : "Email",
-		"displayName" : "Email"
-
-	},
-	{
-		"name": "username",
-		"placeholder" : "Username",
-		"displayName" : "Username"
-
-	},
-	{
-		"name": "password",
-		"placeholder" : "Password",
-		"displayName" : "Password"
-
-	},
-	{
-		"name": "repeat password",
-		"placeholder" : "Repeat Password",
-		"displayName" : "Repeat Password"
-
-	},
-	{
-		"name": "firstname",
-		"placeholder" : "Firstname",
-		"displayName" : "Firstname"
-
-	},
-	{
-		"name": "middlename",
-		"placeholder" : "Middlename",
-		"displayName" : "Middlename"
-
-	},
-	{
-		"name": "lastname",
-		"placeholder" : "Lastname",
-		"displayName" : "Lastname"
-
-	},
-	{
-		"name": "age",
-		"placeholder" : "Age",
-		"displayName" : "Age"
-
-	},
-	{
-		"name": "clientname",
-		"placeholder" : "Clientname",
-		"displayName" : "Clientname"
-
-	},
-	{
-		"name": "phonenumber",
-		"placeholder" : "Phone Number",
-		"displayName" : "Phone Number"
-
-	},
-	{
-		"name": "other",
-		"placeholder" : "Other",
-		"displayName" : "Other"
-
-	}
+	$scope.fieldControlsList = [
+		{
+			"name" : "text",
+			"type" : "TEXT", 
+			"placeholder" : "Text",
+			"displayName" : "Text",
+			"imgUrl" : "img/text.png"
+		},
+		{
+			"name" : "dropdown",
+			"type" : "DROPDOWN",
+			"placeholder" : "Drop-downs",
+			"displayName" : "Drop-downs",
+			"imgUrl" : "img/dropdown.png"
+		},
+		{
+			"name" : "number",
+			"type" : "NUMBER", 
+			"placeholder" : "Number",
+			"displayName" : "Number",
+			"imgUrl" : "img/number.png"
+		},
+		{
+			"name" : "datetime",
+			"type" : "DATETIME", 
+			"placeholder" : "Date/Time",
+			"displayName" : "Date/Time",
+			"imgUrl" : "img/datetime.png"
+		}
 	];
 
+	$scope.formControlsList = [
+		{
+			"name" : "button",
+			"type" : "BUTTON", 
+			"placeholder" : "Button",
+			"displayName" : "Button",
+			"imgUrl" : "img/button.png"
+		},
+		{
+			"name" : "grid",
+			"type" : "GRID", 
+			"placeholder" : "Grid",
+			"displayName" : "Grid",
+			"imgUrl" : "img/grid.png"
+		},
+		{
+			"name" : "group",
+			"type" : "GROUP", 
+			"placeholder" : "Group",
+			"displayName" : "Group",
+			"imgUrl" : "img/group.png"
+		}
+	];
 	$scope.centerAnchor = true;
     $scope.toggleCenterAnchor = function () {$scope.centerAnchor = !$scope.centerAnchor}
 
-	$scope.onDropComplete1=function(data,evt){
-		if(data){
-        var index = $scope.droppedObjects.indexOf(data);
+	$scope.onDropComplete=function(data,evt){
+		if(data)
+        	var index = $scope.droppedObjects.indexOf(data);
         if (index == -1)
-        $scope.droppedObjects.push(data);}	
+        	$scope.droppedObjects.push(data);
     };
 
 	}]);
