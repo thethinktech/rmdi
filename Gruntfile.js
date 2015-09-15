@@ -36,10 +36,6 @@ module.exports = function(grunt) {
               exclude: ['appcommons']
             },
             {
-              name: 'modules/clientAdmin/profileBuilder/profileBuilderCtrl',
-              exclude: ['appcommons']
-            },
-            {
               name: 'modules/clientAdmin/dashboard/dashboardCtrl',
               exclude: ['appcommons']
             },
@@ -49,6 +45,14 @@ module.exports = function(grunt) {
             },
             {
               name: 'modules/clientAdmin/signup/signupCtrl',
+              exclude: ['appcommons']
+            },
+            {
+              name: 'modules/clientAdmin/profileManagement/profileManagementCtrl',
+              exclude: ['appcommons']
+            },
+            {
+              name: 'modules/clientAdmin/profileBuilder/profileBuilderCtrl',
               exclude: ['appcommons']
             },
             {

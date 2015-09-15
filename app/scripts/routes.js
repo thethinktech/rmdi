@@ -22,17 +22,25 @@ define(['angularAMD'],
             controllerUrl: 'modules/clientAdmin/userManagement/userManagementCtrl'
         }));
 
+        $routeProvider.when('/signup', angularAMD.route({
+            templateUrl: 'scripts/modules/clientAdmin/signup/signupView.html',
+            controller: 'SignupCtrl',
+            controllerUrl: 'modules/clientAdmin/signup/signupCtrl'
+        }));
+
+        $routeProvider.when('/profilemanagement', angularAMD.route({
+            templateUrl: 'scripts/modules/clientAdmin/profileManagement/profileManagementView.html',
+            controller: 'ProfileManagementCtrl',
+            controllerUrl: 'modules/clientAdmin/profileManagement/profileManagementCtrl'
+        }));
+
         $routeProvider.when('/profilebuilder', angularAMD.route({
             templateUrl: 'scripts/modules/clientAdmin/profileBuilder/profileBuilderView.html',
             controller: 'ProfileBuilderBuilderCtrl',
             controllerUrl: 'modules/clientAdmin/profileBuilder/profileBuilderCtrl'
         }));
 
-        $routeProvider.when('/signup', angularAMD.route({
-            templateUrl: 'scripts/modules/clientAdmin/signup/signupView.html',
-            controller: 'SignupCtrl',
-            controllerUrl: 'modules/clientAdmin/signup/signupCtrl'
-        }));
+        
 
         //User Module Routes
         $routeProvider.when('/user', angularAMD.route({

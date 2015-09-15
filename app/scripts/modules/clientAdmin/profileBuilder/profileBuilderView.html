@@ -22,7 +22,7 @@
     <div class="container-fluid noPad ">
         <div class="container dash-second">
             <div class="dash-left"><img src="img/profile.png" alt="" class="user-logo">
-                <h4 class="user-name">UM</h4>
+                <h4 class="user-name">PM</h4>
             </div>
             <div class="profile-crumb">
                 <div id="bc1" class="btn-group btn-breadcrumb">
@@ -76,6 +76,9 @@
     <div class="container-fluid noPad ">
         <div class="container dash-bottom">
             <div class="dash-left profile_drags">
+                    <!-- LEFT SIDEBAR -->
+            </div>
+            <!-- <div class="dash-left profile_drags">
                 <div class="btn_head"> Form Controls</div>
                 <ul class="left-btns left-btns-dash">
                     <li ng-repeat="obj in formControlsList">
@@ -83,7 +86,7 @@
                             <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.displayName}}</a>
                         </div>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href=""><img src="img/button.png" alt=""> Buttons</a>
                     </li>
                     <li>
@@ -91,20 +94,20 @@
                     </li>
                     <li>
                         <a href=""><img src="img/group.png" alt=""> Groups</a>
-                    </li> -->
+                    </li>
                 </ul>
                 <div class="btn_head"> Field Controls</div>
                 <ul class="left-btns left-btns-dash">
-                    <!-- <li> -->
+                    <li>
                         <li ng-repeat="obj in fieldControlsList">
                             <div ng-drag="true" ng-drag-data="obj" data-allow-transform="true">
-                                <!-- <input type="text" class="form-control" placeholder="{{obj.placeholder}}" /> -->
+                                <input type="text" class="form-control" placeholder="{{obj.placeholder}}" />
                                 <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.displayName}}</a>
                             </div>
                          </li>
-                        <!-- <a href=""><img src="img/text.png" alt=""> Text</a> -->
-                    <!-- </li> -->
-                    <!-- <li>
+                        <a href=""><img src="img/text.png" alt=""> Text</a>
+                    </li>
+                    <li>
                         <a href=""><img src="img/dropdown.png" alt=""> Drop-downs</a>
                     </li>
                     <li>
@@ -112,9 +115,9 @@
                     </li>
                     <li>
                         <a href=""><img src="img/datetime.png" alt=""> Date/Time</a>
-                    </li> -->
+                    </li>
                 </ul>
-            </div>
+            </div> -->
             <div class="profile-content">
 
                 <!-- PAGE 1 CONTENT STARTS -->
@@ -274,56 +277,100 @@
                
                 <!-- PAGE 4 CONTENT STARTS -->
                 <div id="page4" class="hide" ng-class="{'show': currentTab == 4 || currentTab == 5}">
-                    <div class="profile-section profile_first">
-                        <h4 class="pull-left">New User Setup</h4>
-                        <button class="btn btn-danger btn-flat btn-sm pull-right">Cancel</button>
-                        <button class="btn btn-info btn-flat  btn-sm pull-right">Submit</button>
-                        <button class="btn btn-success btn-flat  btn-sm pull-right">Save</button>
-                    </div>
-
-                    <p class="profile_labels">Basic Data:</p>
-                    <div class="profile-section">
-                        <div class="row">
-                            <div class="col-md-4 form_item">
-                                Created <img src="img/datetime.png" alt="">
-                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
-                            </div>
-                            <div class="col-md-4 form_item">
-                                User ID <img src="img/text.png" alt="">
-                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="profile_labels">User Info:</p>
-                    <div class="profile-section">
-                        <div class="row">
-                            <div ng-drop="true" ng-drop-success="onDropComplete($data,$event)" style="height:500px; width:100%;">
-                                <div ng-repeat="obj in droppedObjects" ng-drag="false" ng-drag-data="obj" ng-center-anchor="{{centerAnchor}}">
-                                    <div class="col-md-4 form_item">
-                                        {{obj.displayName}}
-                                        <img ng-src="{{obj.imgUrl}}" alt="">
-                                        <input type="text">
-                                        <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                    
+                    <div class="sidebar_section">
+                        <div class="btn_head"> Form Controls</div>
+                        <ul class="left-btns left-btns-dash">
+                            <li ng-repeat="obj in formControlsList">
+                                <div ng-drag="true" ng-drag-data="obj" data-allow-transform="true">
+                                    <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.displayName}}</a>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                <a href=""><img src="img/button.png" alt=""> Buttons</a>
+                            </li>
+                            <li>
+                                <a href=""><img src="img/grid.png" alt=""> Grid</a>
+                            </li>
+                            <li>
+                                <a href=""><img src="img/group.png" alt=""> Groups</a>
+                            </li> -->
+                        </ul>
+                        <div class="btn_head"> Field Controls</div>
+                        <ul class="left-btns left-btns-dash">
+                            <!-- <li> -->
+                                <li ng-repeat="obj in fieldControlsList">
+                                    <div ng-drag="true" ng-drag-data="obj" data-allow-transform="true">
+                                        <!-- <input type="text" class="form-control" placeholder="{{obj.placeholder}}" /> -->
+                                        <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.displayName}}</a>
                                     </div>
+                                 </li>
+                                <!-- <a href=""><img src="img/text.png" alt=""> Text</a> -->
+                            <!-- </li> -->
+                            <!-- <li>
+                                <a href=""><img src="img/dropdown.png" alt=""> Drop-downs</a>
+                            </li>
+                            <li>
+                                <a href=""><img src="img/number.png" alt=""> Numbers</a>
+                            </li>
+                            <li>
+                                <a href=""><img src="img/datetime.png" alt=""> Date/Time</a>
+                            </li> -->
+                        </ul>
+                   </div>
+
+                    <div class="content_section">
+                        <div class="profile-section profile_first">
+                            <h4 class="pull-left">New User Setup</h4>
+                            <button class="btn btn-danger btn-flat btn-sm pull-right">Cancel</button>
+                            <button class="btn btn-info btn-flat  btn-sm pull-right">Submit</button>
+                            <button class="btn btn-success btn-flat  btn-sm pull-right">Save</button>
+                        </div>
+
+                        <p class="profile_labels">Basic Data:</p>
+                        <div class="profile-section">
+                            <div class="row">
+                                <div class="col-md-4 form_item">
+                                    Created <img src="img/datetime.png" alt="">
+                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                </div>
+                                <div class="col-md-4 form_item">
+                                    User ID <img src="img/text.png" alt="">
+                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
                                 </div>
                             </div>
-                            <!-- <div class="col-md-4 form_item">
-                                Prefix <img src="img/dropdown.png" alt="">
-                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                        </div>
+
+                        <p class="profile_labels">User Info:</p>
+                        <div class="profile-section">
+                            <div class="row">
+                                <div ng-drop="true" ng-drop-success="onDropComplete($data,$event)" style="height:500px; width:100%;">
+                                    <div ng-repeat="obj in droppedObjects" ng-drag="false" ng-drag-data="obj" ng-center-anchor="{{centerAnchor}}">
+                                        <div class="col-md-4 form_item">
+                                            {{obj.displayName}}
+                                            <img ng-src="{{obj.imgUrl}}" alt="">
+                                            <input type="text">
+                                            <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-4 form_item">
+                                    Prefix <img src="img/dropdown.png" alt="">
+                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                </div>
+                                <div class="col-md-4 form_item">
+                                    First Name <img src="img/text.png" alt="">
+                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                </div>
+                                <div class="col-md-4 form_item">
+                                    Last Name <img src="img/text.png" alt="">
+                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                </div>
+                                <div class="col-md-8 form_item">
+                                    Email <img src="img/text.png" alt="">
+                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                </div> -->
                             </div>
-                            <div class="col-md-4 form_item">
-                                First Name <img src="img/text.png" alt="">
-                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
-                            </div>
-                            <div class="col-md-4 form_item">
-                                Last Name <img src="img/text.png" alt="">
-                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
-                            </div>
-                            <div class="col-md-8 form_item">
-                                Email <img src="img/text.png" alt="">
-                                <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
-                            </div> -->
                         </div>
                     </div>
                 </div>
