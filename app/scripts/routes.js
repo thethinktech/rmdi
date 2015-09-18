@@ -16,28 +16,28 @@ define(['angularAMD'],
             controllerUrl: 'modules/clientAdmin/dashboard/dashboardCtrl'
         }));
 
-        $routeProvider.when('/usermanagement', angularAMD.route({
-            templateUrl: 'scripts/modules/clientAdmin/userManagement/userManagementView.html',
+        $routeProvider.when('/dashboard/usermanagement', angularAMD.route({
+            templateUrl: 'scripts/modules/clientAdmin/dashboard/userManagement/userManagementView.html',
             controller: 'UserManagementCtrl',
-            controllerUrl: 'modules/clientAdmin/userManagement/userManagementCtrl'
+            controllerUrl: 'modules/clientAdmin/dashboard/userManagement/userManagementCtrl'
         }));
 
-        $routeProvider.when('/signup', angularAMD.route({
-            templateUrl: 'scripts/modules/clientAdmin/signup/signupView.html',
-            controller: 'SignupCtrl',
-            controllerUrl: 'modules/clientAdmin/signup/signupCtrl'
+        $routeProvider.when('/dashboard/usermanagement/adduser', angularAMD.route({
+            templateUrl: 'scripts/modules/clientAdmin/dashboard/userManagement/addUser/addUserView.html',
+            controller: 'AddUserCtrl',
+            controllerUrl: 'modules/clientAdmin/dashboard/userManagement/addUser/addUserCtrl'
         }));
 
-        $routeProvider.when('/profilemanagement', angularAMD.route({
-            templateUrl: 'scripts/modules/clientAdmin/profileManagement/profileManagementView.html',
+        $routeProvider.when('/dashboard/profilemanagement', angularAMD.route({
+            templateUrl: 'scripts/modules/clientAdmin/dashboard/profileManagement/profileManagementView.html',
             controller: 'ProfileManagementCtrl',
-            controllerUrl: 'modules/clientAdmin/profileManagement/profileManagementCtrl'
+            controllerUrl: 'modules/clientAdmin/dashboard/profileManagement/profileManagementCtrl'
         }));
 
-        $routeProvider.when('/profilebuilder', angularAMD.route({
-            templateUrl: 'scripts/modules/clientAdmin/profileBuilder/profileBuilderView.html',
+        $routeProvider.when('/dashboard/profilemanagement/profilebuilder', angularAMD.route({
+            templateUrl: 'scripts/modules/clientAdmin/dashboard/profileManagement/profileBuilder/profileBuilderView.html',
             controller: 'ProfileBuilderBuilderCtrl',
-            controllerUrl: 'modules/clientAdmin/profileBuilder/profileBuilderCtrl'
+            controllerUrl: 'modules/clientAdmin/dashboard/profileManagement/profileBuilder/profileBuilderCtrl'
         }));
 
         

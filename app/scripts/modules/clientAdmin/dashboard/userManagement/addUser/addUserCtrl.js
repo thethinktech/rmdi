@@ -1,7 +1,7 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('SignupCtrl',['$scope','USER',
+  app.controller('AddUserCtrl',['$scope','USER',
 	function ($scope,USER) {
 
 		$scope.manadatoryFieldsList = [];

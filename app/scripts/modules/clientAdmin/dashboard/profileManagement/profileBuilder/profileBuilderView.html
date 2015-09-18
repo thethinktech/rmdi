@@ -346,11 +346,45 @@
                             <div class="row">
                                 <div ng-drop="true" ng-drop-success="onDropComplete($data,$event)" style="height:500px; width:100%;">
                                     <div ng-repeat="obj in droppedObjects" ng-drag="false" ng-drag-data="obj" ng-center-anchor="{{centerAnchor}}">
-                                        <div class="col-md-4 form_item">
-                                            {{obj.displayName}}
-                                            <img ng-src="{{obj.imgUrl}}" alt="">
-                                            <input type="text">
-                                            <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                        <div ng-switch="obj.type">
+
+                                            <div class="col-md-4 form_item" ng-switch-when="TEXT">
+                                                {{obj.displayName}}
+                                                <img ng-src="{{obj.imgUrl}}" alt="">
+                                                <input type="text">
+                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                            </div>
+
+                                             <div class="col-md-4 form_item" ng-switch-when="DROPDOWN">
+                                                {{obj.displayName}}
+                                                <img ng-src="{{obj.imgUrl}}" alt="">
+                                                <select>
+                                                    <option value="">Select</option>
+                                                </select>
+                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                            </div>
+
+                                             <div class="col-md-4 form_item" ng-switch-when="NUMBER">
+                                                {{obj.displayName}}
+                                                <img ng-src="{{obj.imgUrl}}" alt="">
+                                                <input type="number" ng-maxlength="10">
+                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                            </div>
+
+                                            <div class="col-md-4 form_item" ng-switch-when="DATETIME">
+                                                {{obj.displayName}}
+                                                <img ng-src="{{obj.imgUrl}}" alt="">
+                                                <input type="datetime-local">
+                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                            </div>
+
+                                            <div class="col-md-4 form_item" ng-switch-when="BUTTON">
+                                                {{obj.displayName}}
+                                                <img ng-src="{{obj.imgUrl}}" alt="">
+                                                <button>Submit</button>
+                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
