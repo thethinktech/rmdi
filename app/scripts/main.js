@@ -14,7 +14,8 @@ require.config({
 		bootstrap:'vendor/bootstrap',
 		store: '../bower_components/store2/src/store2',
 		angularMd5: '../bower_components/angular-md5/angular-md5',
-		draggable : '../bower_components/ngDraggable/ngDraggable'        //Ref : https://github.com/fatlinesofcode/ngDraggable
+		draggable: '../bower_components/ngDraggable/ngDraggable',        //Ref : https://github.com/fatlinesofcode/ngDraggable
+		UIBootstrap: '../bower_components/angular-bootstrap/ui-bootstrap-tpls' 
 	},
 	waitSeconds:600,
 	shim: {
@@ -38,6 +39,9 @@ require.config({
 		},
 		'draggable': {
 			deps:['angular','jquery']
+		},
+		'UIBootstrap': {
+			deps: ['angular']
 		}
 	},
 	priority: [

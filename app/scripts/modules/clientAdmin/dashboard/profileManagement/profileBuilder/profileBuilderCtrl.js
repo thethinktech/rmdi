@@ -1,8 +1,8 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('ProfileBuilderBuilderCtrl',['$scope',
-	function ($scope) {
+  app.controller('ProfileBuilderBuilderCtrl',['$scope', 'COMMONMODAL',
+	function ($scope,COMMONMODAL) {
 
 	$scope.droppedObjects = [];
 	$scope.currentTab = 1;
@@ -61,6 +61,12 @@ define(['app'], function (app) {
 		}
 	];
 	$scope.centerAnchor = true;
+
+	$scope.showPropertiesModal = function(){
+		$scope.modalInstance = COMMONMODAL.showModal('scripts/modules/clientAdmin/dashboard/profileManagement/profileBuilder/propertiesModalView.html',$scope,'');
+	};
+
+
     $scope.toggleCenterAnchor = function () {$scope.centerAnchor = !$scope.centerAnchor}
 
 	$scope.onDropComplete=function(data,evt){
@@ -69,6 +75,10 @@ define(['app'], function (app) {
         if (index == -1)
         	$scope.droppedObjects.push(data);
     };
+
+    $scope.cancel = function () {
+	    $scope.modalInstance.dismiss('cancel');
+	};
 
 	}]);
 });

@@ -1,7 +1,7 @@
 'use strict';
 
-define(['angular','./services/constants','./services/utils','./services/commonServices','./services/adminServices','./services/userServices'], 
-	function (angular,constants,utils,commonServices,adminServices,userServices) {
+define(['angular','./services/constants','./services/utils','./services/commonServices','./services/adminServices','./services/userServices','./services/commonModalService'], 
+	function (angular,constants,utils,commonServices,adminServices,userServices,commonModalService) {
 
 	/* Services */
 	var module = angular.module('services',[]);
@@ -11,5 +11,6 @@ define(['angular','./services/constants','./services/utils','./services/commonSe
 	module.service('COMMONS',commonServices);
 	module.service('ADMIN',adminServices);
 	module.service('USER',userServices);
+	module.service('COMMONMODAL',commonModalService);
 	return module;
 });

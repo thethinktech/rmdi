@@ -10,7 +10,8 @@ define(['angular',
     'bootstrap',
     'store',
     'angularMd5',
-    'draggable'
+    'draggable',
+    'UIBootstrap'
     ], 
     function (angular, angularAMD, angularRoute, angularMocks) {
         'use strict';

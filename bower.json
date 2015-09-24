@@ -19,6 +19,7 @@
     "angular-sanitize": "~1.2.1",
     "store2" : "latest",
     "angular-md5": "~0.1.7",
-    "ngDraggable" : "latest"
+    "ngDraggable" : "latest",
+    "angular-bootstrap" : "latest"
   }
 }

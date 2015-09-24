@@ -15,7 +15,8 @@ define([
         'services',
         'ngSanitize',
         'angular-md5',
-        'ngDraggable'
+        'ngDraggable',
+        'ui.bootstrap'
     ]);
 
     app.config(routes);

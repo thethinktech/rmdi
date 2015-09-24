@@ -352,7 +352,7 @@
                                                 {{obj.displayName}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <input type="text">
-                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                              <div class="col-md-4 form_item" ng-switch-when="DROPDOWN">
@@ -361,28 +361,28 @@
                                                 <select>
                                                     <option value="">Select</option>
                                                 </select>
-                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                              <div class="col-md-4 form_item" ng-switch-when="NUMBER">
                                                 {{obj.displayName}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <input type="number" ng-maxlength="10">
-                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                             <div class="col-md-4 form_item" ng-switch-when="DATETIME">
                                                 {{obj.displayName}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <input type="datetime-local">
-                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                             <div class="col-md-4 form_item" ng-switch-when="BUTTON">
                                                 {{obj.displayName}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <button>Submit</button>
-                                                <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                         </div>
