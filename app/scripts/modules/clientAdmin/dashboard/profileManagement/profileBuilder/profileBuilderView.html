@@ -345,14 +345,14 @@
                         <div class="profile-section">
                             <div class="row">
                                 <div ng-drop="true" ng-drop-success="onDropComplete($data,$event)" style="height:500px; width:100%;">
-                                    <div ng-repeat="obj in droppedObjects" ng-drag="false" ng-drag-data="obj" ng-center-anchor="{{centerAnchor}}">
+                                    <div ng-repeat="obj in selectedFields" ng-drag="false" ng-drag-data="obj" ng-center-anchor="{{centerAnchor}}">
                                         <div ng-switch="obj.type">
 
                                             <div class="col-md-4 form_item" ng-switch-when="TEXT">
                                                 {{obj.displayName}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <input type="text">
-                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                              <div class="col-md-4 form_item" ng-switch-when="DROPDOWN">
@@ -361,28 +361,62 @@
                                                 <select>
                                                     <option value="">Select</option>
                                                 </select>
-                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                              <div class="col-md-4 form_item" ng-switch-when="NUMBER">
                                                 {{obj.displayName}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <input type="number" ng-maxlength="10">
-                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                             <div class="col-md-4 form_item" ng-switch-when="DATETIME">
                                                 {{obj.displayName}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <input type="datetime-local">
-                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                             <div class="col-md-4 form_item" ng-switch-when="BUTTON">
                                                 {{obj.displayName}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <button>Submit</button>
-                                                <span class="operation" ng-click="showPropertiesModal()"><i class="fa fa-exclamation-circle "></i></span>
+                                                <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
+                                            </div>
+
+                                            <div class="col-md-4 form_item" ng-switch-when="GRID">
+                                                {{obj.displayName}}
+                                                <img ng-src="{{obj.imgUrl}}" alt="">
+                                                <table class="table table-bordered step3-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Heading1</th>
+                                                            <th>Heading2</th>
+                                                            <th>Heading3</th>
+                                                            <th>Heading4</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>data</td>
+                                                            <td>data</td>
+                                                            <td>data</td>
+                                                            <td>data</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
+                                            </div>
+
+                                            <div class="col-md-4 form_item" ng-switch-when="GROUP">
+                                                {{obj.displayName}}
+                                                <img ng-src="{{obj.imgUrl}}" alt="">
+                                                <div class="profile-section">
+                                                    <div class="row">
+                                                    </div>
+                                                </div>
+                                                <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                         </div>
