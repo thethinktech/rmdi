@@ -46,7 +46,7 @@ define(['angular','common/header/headerDirective','common/footer/footerDirective
 													'</textarea>';
 					break;
 
-					case 'NUMBER' : template = '<input type="{{customization.type}}" class="form-control" ng-required="customization.required"' +
+					case 'NUMBER' : template = '<input type="text" numbers-only class="form-control" ng-required="customization.required"' +
 													'placeholder="{{customization.placeholder}}" ng-model="customization.dataValue">';
 					break;
 
@@ -60,6 +60,30 @@ define(['angular','common/header/headerDirective','common/footer/footerDirective
 			}
 		}
 	}]);
+
+	//Accepts only numbers in input fields.
+	module.directive('numbersOnly', function () {
+		return {
+		  require: 'ngModel',
+		  restrict: 'A',
+		  link: function (scope, element, attr, ctrl) {
+		    function inputValue(val) {
+		      if (val) {
+		        var digits = val.replace(/[^0-9]/g, '');
+
+		        if (digits !== val) {
+		          ctrl.$setViewValue(digits);
+		          ctrl.$render();
+		        }
+		        return digits;
+
+		      }
+		      return undefined;
+		    }            
+		    ctrl.$parsers.push(inputValue);
+		  }
+		}
+	});
 
 	return module;
 });

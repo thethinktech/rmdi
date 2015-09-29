@@ -8,12 +8,54 @@ define(['app'], function (app) {
 	$scope.currentTab = 1;
 	var index = 0;
 
+	$scope.predefinedFields = [
+		{
+			"label" : "Created",
+			"sysGroup" : "Header",
+			"groupLabel" : "Basic Data",
+			"type" : "DATETIME",
+			"subType" : "",
+			"format" : "YYYY-MM-DD",
+			"length" : "",
+			"tabSequence" : 1
+		},
+		{
+			"label" : "User ID",
+			"sysGroup" : "Header",
+			"groupLabel" : "Basic Data",
+			"type" : "TEXT",
+			"subType" : "Short",
+			"format" : "",
+			"length" : "6",
+			"tabSequence" : 2
+		},
+		{
+			"label" : "Prefix",
+			"sysGroup" : "Body",
+			"groupLabel" : "User Info",
+			"type" : "DROPDOWN",
+			"subType" : "",
+			"format" : "",
+			"length" : "250",
+			"tabSequence" : 3
+		},
+		{
+			"label" : "First Name",
+			"sysGroup" : "Body",
+			"groupLabel" : "User Info",
+			"type" : "TEXT",
+			"subType" : "",
+			"format" : "",
+			"length" : "250",
+			"tabSequence" : 4
+		}
+	];
+
 	var textModel = 
 	{
-		"name" : "text",
+		"label" : "Text",
 		"type" : "TEXT", 
 		"placeholder" : "Text",
-		"displayName" : "Text",
 		"imgUrl" : "img/text.png",
 		"properties" : [
 			{
@@ -41,10 +83,9 @@ define(['app'], function (app) {
 
 	var dropDownModel = 
 	{
-		"name" : "dropdown",
+		"label" : "Dropdown",
 		"type" : "DROPDOWN",
 		"placeholder" : "Drop-downs",
-		"displayName" : "Drop-downs",
 		"imgUrl" : "img/dropdown.png",
 		"properties" : [
 			{
@@ -72,10 +113,9 @@ define(['app'], function (app) {
 
 	var numberModel = 
 	{
-		"name" : "number",
+		"label" : "Number",
 		"type" : "NUMBER", 
 		"placeholder" : "Number",
-		"displayName" : "Number",
 		"imgUrl" : "img/number.png",
 		"properties" : [
 			{
@@ -102,10 +142,9 @@ define(['app'], function (app) {
 	};
 	var dateTimeModel = 
 	{
-		"name" : "datetime",
+		"label" : "Datetime",
 		"type" : "DATETIME", 
 		"placeholder" : "Date/Time",
-		"displayName" : "Date/Time",
 		"imgUrl" : "img/datetime.png",
 		"properties" : [
 			{
@@ -127,10 +166,9 @@ define(['app'], function (app) {
 	};
 	var buttonModel = 
 	{
-		"name" : "button",
+		"label" : "Button",
 		"type" : "BUTTON", 
 		"placeholder" : "Button",
-		"displayName" : "Button",
 		"imgUrl" : "img/button.png",
 		"properties" : [
 			{
@@ -142,10 +180,9 @@ define(['app'], function (app) {
 	};
 	var gridModel = 
 	{
-		"name" : "grid",
+		"label" : "Grid",
 		"type" : "GRID", 
 		"placeholder" : "Grid",
-		"displayName" : "Grid",
 		"imgUrl" : "img/grid.png",
 		"properties" : [
 			{
@@ -167,10 +204,9 @@ define(['app'], function (app) {
 	};
 	var groupModel = 
 	{
-		"name" : "group",
+		"label" : "Group",
 		"type" : "GROUP", 
 		"placeholder" : "Group",
-		"displayName" : "Group",
 		"imgUrl" : "img/group.png",
 		"properties" : [
 			{
@@ -192,55 +228,48 @@ define(['app'], function (app) {
 	};
 	$scope.fieldControlsList = [
 		{
-			"name" : "text",
+			"label" : "Text",
 			"type" : "TEXT", 
 			"placeholder" : "Text",
-			"displayName" : "Text",
 			"imgUrl" : "img/text.png"
 		},
 		{
-			"name" : "dropdown",
+			"label" : "Dropdown",
 			"type" : "DROPDOWN",
 			"placeholder" : "Drop-downs",
-			"displayName" : "Drop-downs",
 			"imgUrl" : "img/dropdown.png"
 		},
 		{
-			"name" : "number",
+			"label" : "Number",
 			"type" : "NUMBER", 
 			"placeholder" : "Number",
-			"displayName" : "Number",
 			"imgUrl" : "img/number.png"
 		},
 		{
-			"name" : "datetime",
+			"label" : "Date/Time",
 			"type" : "DATETIME", 
 			"placeholder" : "Date/Time",
-			"displayName" : "Date/Time",
 			"imgUrl" : "img/datetime.png"
 		}
 	];
 
 	$scope.formControlsList = [
 		{
-			"name" : "button",
+			"label" : "Button",
 			"type" : "BUTTON", 
 			"placeholder" : "Button",
-			"displayName" : "Button",
 			"imgUrl" : "img/button.png"
 		},
 		{
-			"name" : "grid",
+			"label" : "Grid",
 			"type" : "GRID", 
 			"placeholder" : "Grid",
-			"displayName" : "Grid",
 			"imgUrl" : "img/grid.png"
 		},
 		{
-			"name" : "group",
+			"label" : "Group",
 			"type" : "GROUP", 
 			"placeholder" : "Group",
-			"displayName" : "Group",
 			"imgUrl" : "img/group.png"
 		}
 	];
@@ -281,7 +310,7 @@ define(['app'], function (app) {
 
 	$scope.saveProperties = function(){
 		$scope.selectedFields[$scope.selected.index] = $scope.selected.object;
-		$scope.selectedFields[$scope.selected.index].displayName = $scope.selected.object.properties[0].value;
+		$scope.selectedFields[$scope.selected.index].label = $scope.selected.object.properties[0].value;
 		$scope.modalInstance.close(true);
 	};
 

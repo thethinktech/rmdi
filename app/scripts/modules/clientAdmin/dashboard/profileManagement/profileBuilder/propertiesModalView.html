@@ -15,7 +15,7 @@
         <div class="control-group" ng-switch-when="NUMBER">
           <label class="control-label" ng-bind="::property.name"></label>
           <div class="controls">
-            <input type="number" placeholder="" class="input-xlarge" ng-model="property.value">
+            <input type="text" placeholder="" class="input-xlarge" ng-model="property.value" numbers-only>
           </div>
         </div>
         <div class="control-group" ng-switch-when="RADIO">

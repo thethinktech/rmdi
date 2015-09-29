@@ -78,46 +78,6 @@
             <div class="dash-left profile_drags">
                     <!-- LEFT SIDEBAR -->
             </div>
-            <!-- <div class="dash-left profile_drags">
-                <div class="btn_head"> Form Controls</div>
-                <ul class="left-btns left-btns-dash">
-                    <li ng-repeat="obj in formControlsList">
-                        <div ng-drag="true" ng-drag-data="obj" data-allow-transform="true">
-                            <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.displayName}}</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href=""><img src="img/button.png" alt=""> Buttons</a>
-                    </li>
-                    <li>
-                        <a href=""><img src="img/grid.png" alt=""> Grid</a>
-                    </li>
-                    <li>
-                        <a href=""><img src="img/group.png" alt=""> Groups</a>
-                    </li>
-                </ul>
-                <div class="btn_head"> Field Controls</div>
-                <ul class="left-btns left-btns-dash">
-                    <li>
-                        <li ng-repeat="obj in fieldControlsList">
-                            <div ng-drag="true" ng-drag-data="obj" data-allow-transform="true">
-                                <input type="text" class="form-control" placeholder="{{obj.placeholder}}" />
-                                <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.displayName}}</a>
-                            </div>
-                         </li>
-                        <a href=""><img src="img/text.png" alt=""> Text</a>
-                    </li>
-                    <li>
-                        <a href=""><img src="img/dropdown.png" alt=""> Drop-downs</a>
-                    </li>
-                    <li>
-                        <a href=""><img src="img/number.png" alt=""> Numbers</a>
-                    </li>
-                    <li>
-                        <a href=""><img src="img/datetime.png" alt=""> Date/Time</a>
-                    </li>
-                </ul>
-            </div> -->
             <div class="profile-content">
 
                 <!-- PAGE 1 CONTENT STARTS -->
@@ -229,45 +189,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Created</td>
-                                <td>Header</td>
-                                <td>Basic Data</td>
-                                <td>Date</td>
-                                <td></td>
-                                <td>YYYY-MM-DD</td>
-                                <td></td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>User ID</td>
-                                <td>Header</td>
-                                <td>Basic Data</td>
-                                <td>Text</td>
-                                <td>Short</td>
-                                <td></td>
-                                <td>6</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>Prefix</td>
-                                <td>Body</td>
-                                <td>User Info</td>
-                                <td>Drop-down</td>
-                                <td></td>
-                                <td></td>
-                                <td>250</td>
-                                <td>3</td>
-                            </tr>
-                               <tr>
-                                <td>First Name</td>
-                                <td>Body</td>
-                                <td>User Info</td>
-                                <td>Text</td>
-                                <td></td>
-                                <td></td>
-                                <td>250</td>
-                                <td>4</td>
+                            <tr ng-repeat="field in predefinedFields">
+                                <td ng-bind="field.label"></td>
+                                <td ng-bind="field.sysGroup"></td>
+                                <td ng-bind="field.groupLabel"></td>
+                                <td ng-bind="field.type"></td>
+                                <td ng-bind="field.subType"></td>
+                                <td ng-bind="field.format"></td>
+                                <td ng-bind="field.length"></td>
+                                <td ng-bind="field.tabSequence"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -283,39 +213,17 @@
                         <ul class="left-btns left-btns-dash">
                             <li ng-repeat="obj in formControlsList">
                                 <div ng-drag="true" ng-drag-data="obj" data-allow-transform="true">
-                                    <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.displayName}}</a>
+                                    <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.label}}</a>
                                 </div>
                             </li>
-                            <!-- <li>
-                                <a href=""><img src="img/button.png" alt=""> Buttons</a>
-                            </li>
-                            <li>
-                                <a href=""><img src="img/grid.png" alt=""> Grid</a>
-                            </li>
-                            <li>
-                                <a href=""><img src="img/group.png" alt=""> Groups</a>
-                            </li> -->
                         </ul>
                         <div class="btn_head"> Field Controls</div>
                         <ul class="left-btns left-btns-dash">
-                            <!-- <li> -->
                                 <li ng-repeat="obj in fieldControlsList">
                                     <div ng-drag="true" ng-drag-data="obj" data-allow-transform="true">
-                                        <!-- <input type="text" class="form-control" placeholder="{{obj.placeholder}}" /> -->
-                                        <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.displayName}}</a>
+                                        <a href=""><img ng-src="{{obj.imgUrl}}" alt=""> {{obj.label}}</a>
                                     </div>
                                  </li>
-                                <!-- <a href=""><img src="img/text.png" alt=""> Text</a> -->
-                            <!-- </li> -->
-                            <!-- <li>
-                                <a href=""><img src="img/dropdown.png" alt=""> Drop-downs</a>
-                            </li>
-                            <li>
-                                <a href=""><img src="img/number.png" alt=""> Numbers</a>
-                            </li>
-                            <li>
-                                <a href=""><img src="img/datetime.png" alt=""> Date/Time</a>
-                            </li> -->
                         </ul>
                    </div>
 
@@ -332,11 +240,11 @@
                             <div class="row">
                                 <div class="col-md-4 form_item">
                                     Created <img src="img/datetime.png" alt="">
-                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                    <input type="text"> <span class="operation"></span>
                                 </div>
                                 <div class="col-md-4 form_item">
                                     User ID <img src="img/text.png" alt="">
-                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
+                                    <input type="text"> <span class="operation"></span>
                                 </div>
                             </div>
                         </div>
@@ -349,14 +257,14 @@
                                         <div ng-switch="obj.type">
 
                                             <div class="col-md-4 form_item" ng-switch-when="TEXT">
-                                                {{obj.displayName}}
+                                                {{obj.label}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
-                                                <input type="text">
+                                                <input type="text" ng-disabled="true">
                                                 <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                              <div class="col-md-4 form_item" ng-switch-when="DROPDOWN">
-                                                {{obj.displayName}}
+                                                {{obj.label}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <select>
                                                     <option value="">Select</option>
@@ -365,28 +273,28 @@
                                             </div>
 
                                              <div class="col-md-4 form_item" ng-switch-when="NUMBER">
-                                                {{obj.displayName}}
+                                                {{obj.label}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
-                                                <input type="number" ng-maxlength="10">
+                                                <input type="number" ng-disabled="true">
                                                 <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                             <div class="col-md-4 form_item" ng-switch-when="DATETIME">
-                                                {{obj.displayName}}
+                                                {{obj.label}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
-                                                <input type="datetime-local">
+                                                <input type="datetime-local" ng-disabled="true">
                                                 <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                             <div class="col-md-4 form_item" ng-switch-when="BUTTON">
-                                                {{obj.displayName}}
+                                                {{obj.label}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
-                                                <button>Submit</button>
+                                                <button ng-disabled="true">Submit</button>
                                                 <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
 
                                             <div class="col-md-4 form_item" ng-switch-when="GRID">
-                                                {{obj.displayName}}
+                                                {{obj.label}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <table class="table table-bordered step3-table">
                                                     <thead>
@@ -410,7 +318,7 @@
                                             </div>
 
                                             <div class="col-md-4 form_item" ng-switch-when="GROUP">
-                                                {{obj.displayName}}
+                                                {{obj.label}}
                                                 <img ng-src="{{obj.imgUrl}}" alt="">
                                                 <div class="profile-section">
                                                     <div class="row">
@@ -418,26 +326,9 @@
                                                 </div>
                                                 <span class="operation" ng-click="showPropertiesModal($index)"><i class="fa fa-exclamation-circle "></i></span>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="col-md-4 form_item">
-                                    Prefix <img src="img/dropdown.png" alt="">
-                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
-                                </div>
-                                <div class="col-md-4 form_item">
-                                    First Name <img src="img/text.png" alt="">
-                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
-                                </div>
-                                <div class="col-md-4 form_item">
-                                    Last Name <img src="img/text.png" alt="">
-                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
-                                </div>
-                                <div class="col-md-8 form_item">
-                                    Email <img src="img/text.png" alt="">
-                                    <input type="text"> <span class="operation"><i class="fa fa-exclamation-circle "></i></span>
-                                </div> -->
                             </div>
                         </div>
                     </div>
