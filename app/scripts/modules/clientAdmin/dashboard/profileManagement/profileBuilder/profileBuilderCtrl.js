@@ -8,6 +8,78 @@ define(['app'], function (app) {
 	$scope.currentTab = 1;
 	var index = 0;
 
+	$scope.setupFields = [
+		{
+			"question" : "Select data input requirements",
+			"choices" : [
+				{
+					"answer" : "Single Line"
+				},
+				{
+					"answer" : "Multiple Line"
+				}
+			]
+		},
+		{
+			"question" : "Is data input staged?",
+			"choices" : [
+				{
+					"answer" : "Yes"
+				},
+				{
+					"answer" : "No"
+				}
+			]
+		},
+		{
+			"question" : "Is search grid required?",
+			"choices" : [
+				{
+					"answer" : "Yes"
+				},
+				{
+					"answer" : "No"
+				}
+			]
+		},
+		{
+			"question" : "Is search mandatory before data input is enabled?",
+			"choices" : [
+				{
+					"answer" : "Yes"
+				},
+				{
+					"answer" : "No"
+				}
+			]
+		},
+		{
+			"question" : "Select form validation requirements:",
+			"choices" : [
+				{
+					"answer" : "Validation on Submit"
+				},
+				{
+					"answer" : "Explicit Validation"
+				}
+			]
+		},
+		{
+			"question" : "Select form approval options",
+			"choices" : [
+				{
+					"answer" : "No Approval"
+				},
+				{
+					"answer" : "Single Approva"
+				},
+				{
+					"answer" : "Multiple Approvals"
+				}
+			]
+		}
+	];
+
 	$scope.predefinedFields = [
 		{
 			"label" : "Created",

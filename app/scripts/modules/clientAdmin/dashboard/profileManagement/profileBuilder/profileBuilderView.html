@@ -117,54 +117,13 @@
                    <h3>Form Setup</h3>
                     <br>
                     <div class="row">
-                        <div class="col-xs-12">
-                            <h4><strong>Select data input requirements</strong></h4>
-                        </div>
-                        <div class="col-xs-12 profile_boxes">
-                            <p><label><input type="checkbox"> Single Line </label></p>
-                            <p><label><input type="checkbox"> Multiple Line </label></p>
-                        </div>
-
-                        <div class="col-xs-12">
-                            <h4><strong>Is data input staged? </strong></h4>
-                        </div>
-                        <div class="col-xs-12 profile_boxes">
-                            <p><label><input type="checkbox"> Yes </label></p>
-                            <p><label><input type="checkbox"> No </label></p>
-                        </div>
-
-                        <div class="col-xs-12">
-                            <h4><strong>Is search grid required? </strong></h4>
-                        </div>
-                        <div class="col-xs-12 profile_boxes">
-                            <p><label><input type="checkbox"> Yes </label></p>
-                            <p><label><input type="checkbox"> No </label></p>
-                        </div>
-
-                        <div class="col-xs-12">
-                            <h4><strong>Is search mandatory before data input is enabled? </strong></h4>
-                        </div>
-                        <div class="col-xs-12 profile_boxes">
-                            <p><label><input type="checkbox"> Yes </label></p>
-                            <p><label><input type="checkbox"> No </label></p>
-                        </div>
-
-                        <div class="col-xs-12">
-                            <h4><strong>Select form validation requirements:</strong></h4>
-                        </div>
-                        <div class="col-xs-12 profile_boxes">
-                            <p><label><input type="checkbox"> Validation on Submit </label></p>
-                            <p><label><input type="checkbox"> Explicit Validation </label></p>
-                        </div>
-
-                        <div class="col-xs-12">
-                            <h4><strong>Select form approval options</strong></h4>
-                        </div>
-
-                        <div class="col-xs-12 profile_boxes">
-                            <p><label><input type="checkbox"> No Approval </label></p>
-                            <p><label><input type="checkbox"> Single Approval </label></p>
-                            <p><label><input type="checkbox"> Multiple Approvals </label></p>
+                        <div ng-repeat="setupField in setupFields">
+                            <div class="col-xs-12">
+                                <h4><strong ng-bind="::setupField.question">Select data input requirements</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                                <p ng-repeat="choice in setupField.choices"><label><input type="radio" ng-model="setupField.value" value="choice.answer">&nbsp;{{choice.answer}}</label></p>
+                            </div>
                         </div>
                     </div>
                 </div>
