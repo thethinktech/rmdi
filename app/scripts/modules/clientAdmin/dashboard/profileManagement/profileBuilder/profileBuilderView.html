@@ -196,14 +196,72 @@
 
                         <p class="profile_labels">Basic Data:</p>
                         <div class="profile-section">
-                            <div class="row">
-                                <div class="col-md-4 form_item">
-                                    Created <img src="img/datetime.png" alt="">
-                                    <input type="text"> <span class="operation"></span>
-                                </div>
-                                <div class="col-md-4 form_item">
-                                    User ID <img src="img/text.png" alt="">
-                                    <input type="text"> <span class="operation"></span>
+                            <div class="row" ng-repeat="predefinedField in predefinedFields">
+                                <div ng-switch="predefinedField.type">
+
+                                    <div class="col-md-4 form_item" ng-switch-when="TEXT">
+                                        {{predefinedField.label}}
+                                        <img ng-src="{{predefinedField.imgUrl}}" alt="">
+                                        <input type="text" ng-disabled="true">
+                                    </div>
+
+                                     <div class="col-md-4 form_item" ng-switch-when="DROPDOWN">
+                                        {{predefinedField.label}}
+                                        <img ng-src="{{predefinedField.imgUrl}}" alt="">
+                                        <select>
+                                            <option value="">Select</option>
+                                        </select>
+                                    </div>
+
+                                     <div class="col-md-4 form_item" ng-switch-when="NUMBER">
+                                        {{predefinedField.label}}
+                                        <img ng-src="{{predefinedField.imgUrl}}" alt="">
+                                        <input type="number" ng-disabled="true">
+                                    </div>
+
+                                    <div class="col-md-4 form_item" ng-switch-when="DATETIME">
+                                        {{predefinedField.label}}
+                                        <img ng-src="{{predefinedField.imgUrl}}" alt="">
+                                        <input type="datetime-local" ng-disabled="true">
+                                    </div>
+
+                                    <div class="col-md-4 form_item" ng-switch-when="BUTTON">
+                                        {{predefinedField.label}}
+                                        <img ng-src="{{predefinedField.imgUrl}}" alt="">
+                                        <button ng-disabled="true">Submit</button>
+                                    </div>
+
+                                    <div class="col-md-4 form_item" ng-switch-when="GRID">
+                                        {{predefinedField.label}}
+                                        <img ng-src="{{predefinedField.imgUrl}}" alt="">
+                                        <table class="table table-bordered step3-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Heading1</th>
+                                                    <th>Heading2</th>
+                                                    <th>Heading3</th>
+                                                    <th>Heading4</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>data</td>
+                                                    <td>data</td>
+                                                    <td>data</td>
+                                                    <td>data</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-md-4 form_item" ng-switch-when="GROUP">
+                                        {{predefinedFieldpredefinedField.label}}
+                                        <img ng-src="{{predefinedField.imgUrl}}" alt="">
+                                        <div class="profile-section">
+                                            <div class="row">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

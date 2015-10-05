@@ -83,43 +83,118 @@ define(['app'], function (app) {
 	$scope.predefinedFields = [
 		{
 			"label" : "Created",
+			"type" : "DATETIME",
 			"sysGroup" : "Header",
 			"groupLabel" : "Basic Data",
-			"type" : "DATETIME",
 			"subType" : "",
-			"format" : "YYYY-MM-DD",
-			"length" : "",
-			"tabSequence" : 1
+			"tabSequence" : 1,
+			"properties" : [
+				{
+					"name" : "Label",
+					"type" : "TEXT",
+					"value": ""
+				},
+				{
+					"name" : "Format",
+					"type" : "TEXT",
+					"value" : ""
+				},
+				{
+					"name" : "Required",
+					"type" : "RADIO",
+					"value" : false
+				}
+			]
 		},
 		{
 			"label" : "User ID",
+			"type" : "TEXT",
 			"sysGroup" : "Header",
 			"groupLabel" : "Basic Data",
-			"type" : "TEXT",
 			"subType" : "Short",
-			"format" : "",
-			"length" : "6",
-			"tabSequence" : 2
+			"tabSequence" : 2,
+			"properties" : [
+				{
+					"name" : "Label",
+					"type" : "TEXT",
+					"value": ""
+				},
+				{
+					"name" : "Minimum Length",
+					"type" : "NUMBER",
+					"value" : 0
+				},
+				{
+					"name" : "Maximum Length",
+					"type" : "NUMBER",
+					"value" : 0
+				},
+				{
+					"name" : "Required",
+					"type" : "RADIO",
+					"value" : false
+				}
+			]
 		},
 		{
 			"label" : "Prefix",
+			"type" : "DROPDOWN",
 			"sysGroup" : "Body",
 			"groupLabel" : "User Info",
-			"type" : "DROPDOWN",
 			"subType" : "",
-			"format" : "",
-			"length" : "250",
-			"tabSequence" : 3
+			"tabSequence" : 3,
+			"properties" : [
+				{
+					"name" : "Label",
+					"type" : "TEXT",
+					"value": ""
+				},
+				{
+					"name" : "Minimum Length",
+					"type" : "NUMBER",
+					"value" : 0
+				},
+				{
+					"name" : "Maximum Length",
+					"type" : "NUMBER",
+					"value" : 0
+				},
+				{
+					"name" : "Required",
+					"type" : "RADIO",
+					"value" : false
+				}
+			]
 		},
 		{
 			"label" : "First Name",
+			"type" : "TEXT",
 			"sysGroup" : "Body",
 			"groupLabel" : "User Info",
-			"type" : "TEXT",
 			"subType" : "",
-			"format" : "",
-			"length" : "250",
-			"tabSequence" : 4
+			"tabSequence" : 4,
+			"properties" : [
+				{
+					"name" : "Label",
+					"type" : "TEXT",
+					"value": ""
+				},
+				{
+					"name" : "Minimum Length",
+					"type" : "NUMBER",
+					"value" : 0
+				},
+				{
+					"name" : "Maximum Length",
+					"type" : "NUMBER",
+					"value" : 0
+				},
+				{
+					"name" : "Required",
+					"type" : "RADIO",
+					"value" : false
+				}
+			]
 		}
 	];
 
