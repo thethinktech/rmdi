@@ -1,21 +1,25 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('ProfileBuilderBuilderCtrl',['$scope', 'COMMONMODAL',
-	function ($scope,COMMONMODAL) {
+  app.controller('ProfileBuilderBuilderCtrl',['$scope', 'COMMONMODAL', 'UTILS',
+	function ($scope,COMMONMODAL,UTILS) {
 
 	$scope.selectedFields = [];
 	$scope.currentTab = 1;
 	var index = 0;
 
-	$scope.setupFields = [
+	$scope.profileBuilderObj = {
+		"name" : "",
+		"setupFields" : [
 		{
 			"question" : "Select data input requirements",
 			"choices" : [
 				{
+					"id" : 1,
 					"answer" : "Single Line"
 				},
 				{
+					"id" : 2,
 					"answer" : "Multiple Line"
 				}
 			]
@@ -24,9 +28,12 @@ define(['app'], function (app) {
 			"question" : "Is data input staged?",
 			"choices" : [
 				{
+					
+					"id" : 1,
 					"answer" : "Yes"
 				},
 				{
+					"id" : 2,
 					"answer" : "No"
 				}
 			]
@@ -35,9 +42,11 @@ define(['app'], function (app) {
 			"question" : "Is search grid required?",
 			"choices" : [
 				{
+					"id" : 1,
 					"answer" : "Yes"
 				},
 				{
+					"id" : 2,
 					"answer" : "No"
 				}
 			]
@@ -46,9 +55,11 @@ define(['app'], function (app) {
 			"question" : "Is search mandatory before data input is enabled?",
 			"choices" : [
 				{
+					"id" : 1,
 					"answer" : "Yes"
 				},
 				{
+					"id" : 2,
 					"answer" : "No"
 				}
 			]
@@ -57,9 +68,11 @@ define(['app'], function (app) {
 			"question" : "Select form validation requirements:",
 			"choices" : [
 				{
+					"id" : 1,
 					"answer" : "Validation on Submit"
 				},
 				{
+					"id" : 2,
 					"answer" : "Explicit Validation"
 				}
 			]
@@ -68,19 +81,21 @@ define(['app'], function (app) {
 			"question" : "Select form approval options",
 			"choices" : [
 				{
+					"id" : 1,
 					"answer" : "No Approval"
 				},
 				{
+					"id" : 2,
 					"answer" : "Single Approva"
 				},
 				{
+					"id" : 3,
 					"answer" : "Multiple Approvals"
 				}
 			]
 		}
-	];
-
-	$scope.predefinedFields = [
+	],
+	"predefinedFields" : [
 		{
 			"label" : "Created",
 			"type" : "DATETIME",
@@ -196,7 +211,9 @@ define(['app'], function (app) {
 				}
 			]
 		}
-	];
+	],
+	"selectedFields" : []
+	};
 
 	var textModel = 
 	{
@@ -224,6 +241,11 @@ define(['app'], function (app) {
 				"name" : "Required",
 				"type" : "RADIO",
 				"value" : false
+			},
+			{
+				"name" : "Field Type",
+				"type" : "TEXT",
+				"value" : "text"
 			}
 		]
 	};
@@ -407,12 +429,12 @@ define(['app'], function (app) {
 			"placeholder" : "Button",
 			"imgUrl" : "img/button.png"
 		},
-		{
-			"label" : "Grid",
-			"type" : "GRID", 
-			"placeholder" : "Grid",
-			"imgUrl" : "img/grid.png"
-		},
+		// {
+		// 	"label" : "Grid",
+		// 	"type" : "GRID", 
+		// 	"placeholder" : "Grid",
+		// 	"imgUrl" : "img/grid.png"
+		// },
 		{
 			"label" : "Group",
 			"type" : "GROUP", 
@@ -423,7 +445,7 @@ define(['app'], function (app) {
 	$scope.centerAnchor = true;
 
 	$scope.showPropertiesModal = function(value){
-		$scope.selected = {index : value, object : $scope.selectedFields[value]};
+		$scope.selected = {index : value, object : $scope.profileBuilderObj.selectedFields[value]};
 		$scope.modalInstance = COMMONMODAL.showModal('scripts/modules/clientAdmin/dashboard/profileManagement/profileBuilder/propertiesModalView.html',$scope,'');
 	};
 
@@ -448,7 +470,7 @@ define(['app'], function (app) {
 							break;
 		}
 			tempModel.id = ++index;
-			$scope.selectedFields.push(tempModel);
+			$scope.profileBuilderObj.selectedFields.push(tempModel);
     };
 
     $scope.cancel = function () {
@@ -456,9 +478,25 @@ define(['app'], function (app) {
 	};
 
 	$scope.saveProperties = function(){
-		$scope.selectedFields[$scope.selected.index] = $scope.selected.object;
-		$scope.selectedFields[$scope.selected.index].label = $scope.selected.object.properties[0].value;
+		$scope.profileBuilderObj.selectedFields[$scope.selected.index] = $scope.selected.object;
+		$scope.profileBuilderObj.selectedFields[$scope.selected.index].label = $scope.selected.object.properties[0].value;
 		$scope.modalInstance.close(true);
+	};
+
+	$scope.saveProfile = function(){
+		UTILS.setInLocalStorage("profileBuilderObj",$scope.profileBuilderObj);
+	};
+
+	$scope.publishProfile = function(){
+		$scope.profileBuilderObj.status = "Published";
+		$scope.profileBuilderObj.lastModified = new Date();
+		$scope.profileBuilderObj.version = 0;
+		var temp = [];
+		if(UTILS.getFromLocalStorage("profilesList")){
+			temp = UTILS.getFromLocalStorage("profilesList");
+		}
+		x.push($scope.profileBuilderObj);
+		UTILS.setInLocalStorage("profilesList",temp);
 	};
 
 	}]);

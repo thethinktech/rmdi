@@ -44,8 +44,8 @@
                 </div>
                 <div class="profile_right_btn pull-right">
                     <button class="btn btn-default btn-sm btn-flat" ng-disabled="currentTab != 4">Validate</button>
-                    <button class="btn btn-warning btn-sm btn-flat" ng-disabled="currentTab != 5">Publish</button>
-                    <button class="btn btn-success btn-sm btn-flat">Save</button>
+                    <button class="btn btn-warning btn-sm btn-flat" ng-disabled="currentTab != 5" ng-click="publishProfile()">Publish</button>
+                    <button class="btn btn-success btn-sm btn-flat" ng-click="saveProfile()">Save</button>
                     <button class="btn btn-danger btn-sm btn-flat">Cancel</button>
                     <button class="btn btn-default btn-sm btn-flat"><i class="fa fa-refresh"></i></button>
                     <!-- Single button -->
@@ -86,7 +86,7 @@
                     <br>
                     <div class="row">
                         <div class="col-xs-2"><h4>Form Name</h4></div>
-                        <div class="col-xs-10"><h4>Create New User</h4></div>
+                        <div class="col-xs-10"><h4><input type="text" ng-model="profileBuilderObj.name"/></h4></div>
                     </div>
 
                     <div class="row">
@@ -117,12 +117,12 @@
                    <h3>Form Setup</h3>
                     <br>
                     <div class="row">
-                        <div ng-repeat="setupField in setupFields">
+                        <div ng-repeat="setupField in profileBuilderObj.setupFields">
                             <div class="col-xs-12">
                                 <h4><strong ng-bind="::setupField.question">Select data input requirements</strong></h4>
                             </div>
                             <div class="col-xs-12 profile_boxes">
-                                <p ng-repeat="choice in setupField.choices"><label><input type="radio" ng-model="setupField.value" value="choice.answer">&nbsp;{{choice.answer}}</label></p>
+                                <p ng-repeat="choice in setupField.choices"><label><input type="radio" ng-model="setupField.selectedAnswer" value="{{choice.answer}}">&nbsp;{{choice.answer}}</label></p>
                             </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="field in predefinedFields">
+                            <tr ng-repeat="field in profileBuilderObj.predefinedFields">
                                 <td ng-bind="field.label"></td>
                                 <td ng-bind="field.sysGroup"></td>
                                 <td ng-bind="field.groupLabel"></td>
@@ -189,14 +189,14 @@
                     <div class="content_section">
                         <div class="profile-section profile_first">
                             <h4 class="pull-left">New User Setup</h4>
-                            <button class="btn btn-danger btn-flat btn-sm pull-right">Cancel</button>
+                            <!-- <button class="btn btn-danger btn-flat btn-sm pull-right">Cancel</button>
                             <button class="btn btn-info btn-flat  btn-sm pull-right">Submit</button>
-                            <button class="btn btn-success btn-flat  btn-sm pull-right">Save</button>
+                            <button class="btn btn-success btn-flat  btn-sm pull-right">Save</button> -->
                         </div>
 
                         <p class="profile_labels">Basic Data:</p>
                         <div class="profile-section">
-                            <div class="row" ng-repeat="predefinedField in predefinedFields">
+                            <div class="row" ng-repeat="predefinedField in profileBuilderObj.predefinedFields">
                                 <div ng-switch="predefinedField.type">
 
                                     <div class="col-md-4 form_item" ng-switch-when="TEXT">
