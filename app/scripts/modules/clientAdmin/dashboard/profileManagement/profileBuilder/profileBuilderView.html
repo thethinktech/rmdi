@@ -110,8 +110,8 @@
                     </div>
                 </div>
                 <!-- PAGE 1 CONTENT ENDS -->
-              
-             
+
+
                 <!-- PAGE 2 CONTENT STARTS-->
                 <div id="page2" class="hide" ng-class="{'show': currentTab == 2}">
                    <h3>Form Setup</h3>
@@ -128,8 +128,8 @@
                     </div>
                 </div>
                 <!-- PAGE 2 CONTENT ENDS-->
-                
-                
+
+
                 <!-- PAGE 3 CONTENT STARTS -->
                 <div id="page3" class="hide" ng-class="{'show': currentTab == 3}">
                     <h3>Form Setup</h3>
@@ -162,11 +162,11 @@
                     </table>
                 </div>
                 <!-- PAGE 3 CONTENT ENDS -->
-               
-               
+
+
                 <!-- PAGE 4 CONTENT STARTS -->
                 <div id="page4" class="hide" ng-class="{'show': currentTab == 4 || currentTab == 5}">
-                    
+
                     <div class="sidebar_section">
                         <div class="btn_head"> Form Controls</div>
                         <ul class="left-btns left-btns-dash">
@@ -269,8 +269,8 @@
                         <p class="profile_labels">User Info:</p>
                         <div class="profile-section">
                             <div class="row">
-                                <div ng-drop="true" ng-drop-success="onDropComplete($data,$event)" style="height:500px; width:100%;">
-                                    <div ng-repeat="obj in profileBuilderObj.selectedFields" ng-drag="false" ng-drag-data="obj" ng-center-anchor="{{centerAnchor}}">
+                                <div ng-drop="true" ng-drop-success="onDropComplete($data,$event)" class="u-info">
+                                    <div ng-repeat="obj in selectedFields" ng-drag="false" ng-drag-data="obj" ng-center-anchor="{{centerAnchor}}">
                                         <div ng-switch="obj.type">
 
                                             <div class="col-md-4 form_item" ng-switch-when="TEXT">
@@ -353,6 +353,40 @@
                 <!-- PAGE 4 CONTENT ENDS -->
 
             </div>
+
+
+            <div class="nxt_prev_container"><button class="btn btn-info btn-flat">Previous</button> <button class="btn btn-info btn-flat">Next</button></div>
         </div>
     </div>
 </div>
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+    $(document).on('click','.step3-table td',function(e){
+        if($(this).find('.edit_input').length==0){
+            var $this=$(this),
+                $val=$this.text();
+                $this.html('<input type="text" class="edit_input">');
+            $this.find('.edit_input').val($val).focus();
+            //alert($val);
+        }
+
+    });
+
+    $(document).on('keyup','.edit_input',function (e) {
+            if (e.keyCode == 13) {
+                var $val=$(this).val(),
+                    $parent=$(this).parent('td');
+                $(this).remove();
+              //  alert($val);
+               $parent.text($val);
+            }
+});
+
+});
+</script>
