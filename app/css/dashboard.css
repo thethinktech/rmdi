@@ -648,4 +648,9 @@ img.user-logo {
 .propertyModalBody .property_item{
      margin-top: 20px
 }
-
+.noBorder{
+ border: 0
+}
+.bleft{
+ border-left:1px solid #ccc
+}
