@@ -1,25 +1,18 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('ProfileManagementCtrl',['$scope', '$location', 'ADMIN',
-	function ($scope,$location,ADMIN) {
+  app.controller('ProfileManagementCtrl',['$scope', '$location', 'ADMIN', 'UTILS',
+	function ($scope,$location,ADMIN,UTILS) {
 
-		$scope.usersList = [];
+		$scope.profilesList = [];
 
 		$scope.goToUrl = function(url){
 			$location.path(url);
 		};
 
 		var init = function(){
-			ADMIN.getUsers()
-			.success(function(data,status,headers,config){
-				if(data){
-					$scope.usersList = data;
-				}
-			})
-			.error(function(data,status,headers,config){
-				console.log('Error Occrrued');
-			});
+			$scope.profilesList =  UTILS.getFromLocalStorage("profilesList");
+			console.log($scope.profilesList);
 		};
 		init();
 		
