@@ -270,7 +270,7 @@
                         <div class="profile-section">
                             <div class="row">
                                 <div ng-drop="true" ng-drop-success="onDropComplete($data,$event)" class="u-info">
-                                    <div ng-repeat="obj in selectedFields" ng-drag="false" ng-drag-data="obj" ng-center-anchor="{{centerAnchor}}">
+                                    <div ng-repeat="obj in profileBuilderObj.selectedFields" ng-drag="false" ng-drag-data="obj" ng-center-anchor="{{centerAnchor}}">
                                         <div ng-switch="obj.type">
 
                                             <div class="col-md-4 form_item" ng-switch-when="TEXT">
