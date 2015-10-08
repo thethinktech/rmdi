@@ -1,8 +1,8 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('ProfileBuilderBuilderCtrl',['$scope', 'COMMONMODAL', 'UTILS',
-	function ($scope,COMMONMODAL,UTILS) {
+  app.controller('ProfileBuilderBuilderCtrl',['$scope', 'COMMONMODAL', 'UTILS', '$location',
+	function ($scope,COMMONMODAL,UTILS,$location) {
 
 	$scope.selectedFields = [];
 	$scope.currentTab = 1;
@@ -495,8 +495,9 @@ define(['app'], function (app) {
 		if(UTILS.getFromLocalStorage("profilesList")){
 			temp = UTILS.getFromLocalStorage("profilesList");
 		}
-		x.push($scope.profileBuilderObj);
+		temp.push($scope.profileBuilderObj);
 		UTILS.setInLocalStorage("profilesList",temp);
+		$location.path('dashboard/profilemanagement');
 	};
 
 	}]);
