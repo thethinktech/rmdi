@@ -4,7 +4,7 @@
         <div class="dash-left"><img src="img/large-logo.png" alt="" class="page-logo"></div>
         <div class="dash-mid">
             <div class="input-group search-group">
-              <input type="text" class="form-control" placeholder="Search Name">
+              <input type="text" class="form-control" placeholder="Search Name" ng-model="query">
               <button class="input-group-addon" ><i class="fa fa-search"></i></button>
             </div>
         </div>
@@ -74,11 +74,11 @@
             <div class="col-xs-1 text-right"><i class="fa fa-cog"></i></div>
           </div>
           <div class="table-tbody">
-            <div class="row table-item" ng-repeat="user in usersList">
+            <div class="row table-item" ng-repeat="user in usersList | filter:query">
               <div class="col-xs-5"><img src="img/profile.png" alt=""> <span ng-bind="::user.name"></span></div>
               <div class="col-xs-2 text-center" ng-bind="::user.status"></div>
-              <div class="col-xs-2 text-center" ng-bind="::user.lastModifiedDate |  formatDate:'MMM dd, yyyy'"></div>
-              <div class="col-xs-2 text-center" ng-bind="::user.role"></div>
+              <div class="col-xs-2 text-center" ng-bind="::user.lastModified | date:'MMM dd, yyyy'"></div>
+              <div class="col-xs-2 text-center" ng-bind="::user.role.valueText"></div>
               <div class="col-xs-1 text-center"></div>
             </div>
           </div>

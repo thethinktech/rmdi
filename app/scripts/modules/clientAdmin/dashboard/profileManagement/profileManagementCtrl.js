@@ -12,7 +12,6 @@ define(['app'], function (app) {
 
 		var init = function(){
 			$scope.profilesList =  UTILS.getFromLocalStorage("profilesList");
-			console.log($scope.profilesList);
 		};
 		init();
 		

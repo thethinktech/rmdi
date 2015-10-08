@@ -72,7 +72,7 @@ define(['angular'], function (angular) {
                 "type" : "TEXT",
                 "defaultValue" : "",
                 "validationExp" : "",
-                "name" : "Username",
+                "name" : "Username"
             },
             {
                 "id" : 2,
@@ -82,7 +82,7 @@ define(['angular'], function (angular) {
                 "type" : "PASSWORD",
                 "defaultValue" : "",
                 "validationExp" : "",
-                "name" : "Password",
+                "name" : "Password"
             },
             {
                 "id" : 3,
@@ -92,7 +92,7 @@ define(['angular'], function (angular) {
                 "type" : "TEXT",
                 "defaultValue" : "",
                 "validationExp" : "",
-                "name" : "First Name",
+                "name" : "First Name"
             },
             {
                 "id" : 4,
@@ -102,17 +102,34 @@ define(['angular'], function (angular) {
                 "type" : "TEXT",
                 "defaultValue" : "",
                 "validationExp" : "",
-                "name" : "Last Name",
+                "name" : "Last Name"
             },
             {
                 "id" : 5,
                 "required" : true,
                 "displayLabel" : "Role",
                 "placeholder" : "Role",
-                "type" : "TEXT",
-                "defaultValue" : "",
+                "type" : "DROPDOWNLIST",
+                "defaultValue" : "Select Role",
                 "validationExp" : "",
                 "name" : "Role",
+                "customizationValues" : [
+                {
+                    "id" : 1,
+                    "valueText" : "Admin"
+                },
+                {
+                    "id" : 2,
+                    "valueText" : "Super Admin"
+                },
+                {
+                    "id" : 3,
+                    "valueText" : "Data Analyst"
+                },
+                {
+                    "id" : 4,
+                    "valueText" : "Analyst"
+                }]
             },
             {
                 "id" : 6,
@@ -122,7 +139,7 @@ define(['angular'], function (angular) {
                 "type" : "TEXT",
                 "defaultValue" : "",
                 "validationExp" : "",
-                "name" : "Client ID",
+                "name" : "Client ID"
             }];
 
             var additionalFieldsList = [
@@ -134,7 +151,7 @@ define(['angular'], function (angular) {
                 "type" : "TEXT",
                 "defaultValue" : "",
                 "validationExp" : "",
-                "name" : "Sin Number",
+                "name" : "Sin Number"
             },
             {
                 "id" : 2,
@@ -144,7 +161,7 @@ define(['angular'], function (angular) {
                 "type" : "CALENDAR",
                 "defaultValue" : "",
                 "validationExp" : "",
-                "name" : "DOB",
+                "name" : "DOB"
             },
             {
                 "id" : 3,
@@ -154,7 +171,7 @@ define(['angular'], function (angular) {
                 "type" : "EMAIL",
                 "defaultValue" : "",
                 "validationExp" : "",
-                "name" : "Email",
+                "name" : "Email"
             },
             {
                 "id" : 4,
@@ -164,7 +181,7 @@ define(['angular'], function (angular) {
                 "type" : "NUMBER",
                 "defaultValue" : "XXX-XXX-XXXX",
                 "validationExp" : "",
-                "name" : "Phone Number",
+                "name" : "Phone Number"
             },
             {
                 "id" : 5,
@@ -174,7 +191,7 @@ define(['angular'], function (angular) {
                 "type" : "TEXTAREA",
                 "defaultValue" : "",
                 "validationExp" : "",
-                "name" : "Address",
+                "name" : "Address"
             }
         ];
 

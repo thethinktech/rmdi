@@ -23,15 +23,21 @@ define(['angular','common/header/headerDirective','common/footer/footerDirective
 													'placeholder="{{customization.placeholder}}" ng-model="customization.dataValue">';
 					break;
 
-					case 'DROPDOWNLIST' : template = '<div class="col-sm-6 form-group marginBottom5">' + 
-												'<label for="" class="col-xs-12 col-sm-4 control-label" ng-bind="::customization.displayLabel"></label>' +
-												'<div class="col-xs-12 col-sm-8">' + '<select class="form-control" ng-required="customization.required" ng-model="customization.dataValue"' +
+					// case 'DROPDOWNLIST' : template = '<div class="col-sm-6 form-group marginBottom5">' + 
+					// 							'<label for="" class="col-xs-12 col-sm-4 control-label" ng-bind="::customization.displayLabel"></label>' +
+					// 							'<div class="col-xs-12 col-sm-8">' + '<select class="form-control" ng-required="customization.required" ng-model="customization.dataValue"' +
+					// 								 'ng-options="value as value.valueText for value in customization.customizationValues">' + 
+					// 								 '<option value="" ng-bind="::customization.defaultValue"></option>' +
+					// 								 '</select>' + 
+					// 							'</div>' +
+					// 						    '<div class="clearfix"></div>' +
+					// 						 '</div>';
+					// break;
+
+					case 'DROPDOWNLIST' : template = '<select class="form-control" style="margin-bottom:15px;" ng-required="customization.required" ng-model="customization.dataValue"' +
 													 'ng-options="value as value.valueText for value in customization.customizationValues">' + 
 													 '<option value="" ng-bind="::customization.defaultValue"></option>' +
-													 '</select>' + 
-												'</div>' +
-											    '<div class="clearfix"></div>' +
-											 '</div>';
+													 '</select>';
 					break;
 
 					case 'PASSWORD' : template = '<input type="{{customization.type}}" class="form-control" ng-required="customization.required"' +

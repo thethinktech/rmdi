@@ -1,8 +1,8 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('UserManagementCtrl',['$scope', '$location', 'ADMIN',
-	function ($scope,$location,ADMIN) {
+  app.controller('UserManagementCtrl',['$scope', '$location', 'ADMIN', 'UTILS',
+	function ($scope,$location,ADMIN,UTILS) {
 
 		$scope.usersList = [];
 
@@ -11,15 +11,17 @@ define(['app'], function (app) {
 		};
 
 		var init = function(){
-			ADMIN.getUsers()
-			.success(function(data,status,headers,config){
-				if(data){
-					$scope.usersList = data;
-				}
-			})
-			.error(function(data,status,headers,config){
-				console.log('Error Occrrued');
-			});
+
+			$scope.usersList =  UTILS.getFromLocalStorage("usersList");
+			// ADMIN.getUsers()
+			// .success(function(data,status,headers,config){
+			// 	if(data){
+			// 		$scope.usersList = data;
+			// 	}
+			// })
+			// .error(function(data,status,headers,config){
+			// 	console.log('Error Occrrued');
+			// });
 		};
 		init();
 		
