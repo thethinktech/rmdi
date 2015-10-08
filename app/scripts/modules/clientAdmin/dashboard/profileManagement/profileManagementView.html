@@ -1,7 +1,7 @@
 <div class="main">
   <div class="container-fluid noPad ">
     <div class="container dash-top">
-        <div class="dash-left"><img src="img/large-logo.png" alt="" class="page-logo"></div>
+        <div class="dash-left"><img src="img/logo.png" alt="" class="page-logo"></div>
         <div class="dash-mid">
             <div class="input-group search-group">
               <input type="text" class="form-control" placeholder="Search Name" ng-model="query">
@@ -10,10 +10,10 @@
         </div>
         <div class="dash-right">
             <div class="profile-right">
-                <div class="profile-item text-center">Raman</div>
+                <div class="profile-item text-center">Admin</div>
                 <div class="profile-item text-center"><i class="fa fa-th"></i></div>
                 <div class="profile-item text-center"><span class="profile-notif"><i class="fa fa-bell"></i></span></div>
-                <div class="profile-item text-center img-circle profile-img"><img src="img/logo.jpg" alt=""></div>
+                <div class="profile-item text-center img-circle profile-img"><img src="img/profile.png" alt=""></div>
             </div>
         </div>
     </div>
@@ -45,9 +45,9 @@
     </div>
   </div>
   </div>
-          <div class="container-fluid noPad ">
-            <div class="container dash-bottom">
-               <div class="dash-left">
+          <div class="container-fluid noPad full_height">
+            <div class="container dash-bottom full_height">
+               <div class="dash-left full_height grayBack">
                    <button class="btn btn-new" ng-click="goToUrl('dashboard/profilemanagement/profilebuilder')">NEW</button>
                    <ul class="left-btns">
                        <li class="active"><i class="fa fa-clock-o"></i> <span>Recent</span></li>
@@ -60,7 +60,7 @@
             <div class="row table-item table-head">
                 <div class="col-xs-5">Name <span class="sort"><i class="fa fa-caret-up"></i></span></div>
                 <div class="col-xs-2 text-center">Status <span class="sort"><i class="fa fa-caret-down"></i></span></div>
-                <div class="col-xs-2 text-center">Last Modified <span class="sort"><i class="fa fa-caret-up"></i></span></div>
+                <div class="col-xs-2 padzero text-center">Last Modified <span class="sort"><i class="fa fa-caret-up"></i></span></div>
                 <div class="col-xs-2 text-center">Version <span class="sort"><i class="fa fa-caret-down"></i></span></div>
                 <div class="col-xs-1 text-right"><i class="fa fa-cog"></i></div>
             </div>
@@ -75,7 +75,7 @@
             </div>
                     </div>
                 </div>
-        <div class="dash-right tab-back">
+        <div class="dash-right tab-back grayBack full_height">
           <div class="filter-section pull-left">
             <div class="btn-group filter-group">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

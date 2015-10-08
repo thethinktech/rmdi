@@ -1,7 +1,7 @@
     <div class="main dash-main">
     <div class="container-fluid noPad ">
         <div class="container dash-top">
-            <div class="dash-left"><img src="img/large-logo.png" alt="" class="page-logo"></div>
+            <div class="dash-left"><img src="img/logo.png" alt="" class="page-logo"></div>
             <div class="dash-mid">
                 <div class="input-group search-group">
                     <input type="text" class="form-control" placeholder="Search Name">
@@ -10,10 +10,10 @@
             </div>
             <div class="dash-right">
                 <div class="profile-right">
-                    <div class="profile-item text-center">Raman</div>
+                    <div class="profile-item text-center">Admin</div>
                     <div class="profile-item text-center"><i class="fa fa-th"></i></div>
                     <div class="profile-item text-center"><span class="profile-notif"><i class="fa fa-bell"></i></span></div>
-                    <div class="profile-item text-center img-circle profile-img"><img src="img/logo.jpg" alt=""></div>
+                    <div class="profile-item text-center img-circle profile-img"><img src="img/profile.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -199,13 +199,13 @@
                             <div class="row" ng-repeat="predefinedField in profileBuilderObj.predefinedFields">
                                 <div ng-switch="predefinedField.type">
 
-                                    <div class="col-md-4 form_item" ng-switch-when="TEXT">
+                                    <div class="col-md-5 form_item" ng-switch-when="TEXT">
                                         {{predefinedField.label}}
                                         <img ng-src="{{predefinedField.imgUrl}}" alt="">
                                         <input type="text" ng-disabled="true">
                                     </div>
 
-                                     <div class="col-md-4 form_item" ng-switch-when="DROPDOWN">
+                                     <div class="col-md-5 form_item" ng-switch-when="DROPDOWN">
                                         {{predefinedField.label}}
                                         <img ng-src="{{predefinedField.imgUrl}}" alt="">
                                         <select>
@@ -213,25 +213,25 @@
                                         </select>
                                     </div>
 
-                                     <div class="col-md-4 form_item" ng-switch-when="NUMBER">
+                                     <div class="col-md-5 form_item" ng-switch-when="NUMBER">
                                         {{predefinedField.label}}
                                         <img ng-src="{{predefinedField.imgUrl}}" alt="">
                                         <input type="number" ng-disabled="true">
                                     </div>
 
-                                    <div class="col-md-4 form_item" ng-switch-when="DATETIME">
+                                    <div class="col-md-5 form_item" ng-switch-when="DATETIME">
                                         {{predefinedField.label}}
                                         <img ng-src="{{predefinedField.imgUrl}}" alt="">
                                         <input type="datetime-local" ng-disabled="true">
                                     </div>
 
-                                    <div class="col-md-4 form_item" ng-switch-when="BUTTON">
+                                    <div class="col-md-5 form_item" ng-switch-when="BUTTON">
                                         {{predefinedField.label}}
                                         <img ng-src="{{predefinedField.imgUrl}}" alt="">
                                         <button ng-disabled="true">Submit</button>
                                     </div>
 
-                                    <div class="col-md-4 form_item" ng-switch-when="GRID">
+                                    <div class="col-md-5 form_item" ng-switch-when="GRID">
                                         {{predefinedField.label}}
                                         <img ng-src="{{predefinedField.imgUrl}}" alt="">
                                         <table class="table table-bordered step3-table">
