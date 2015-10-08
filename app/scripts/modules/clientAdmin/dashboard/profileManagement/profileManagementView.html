@@ -45,53 +45,6 @@
     </div>
   </div>
   </div>
-  <!-- <div class="container-fluid noPad ">
-    <div class="container dash-bottom">
-        <div class="dash-left">
-          <button class="btn btn-new" ng-click="goToUrl('dashboard/profilemanagement/profilebuilder')">NEW</button>
-          <ul class="left-btns">
-            <li class="active"><i class="fa fa-clock-o"></i> <span>Recent</span></li>
-            <li><i class="fa fa-star"></i> <span>Starred</span></li>
-            <li><i class="fa fa-trash-o"></i> <span>Trash</span></li>
-          </ul>
-        </div>
-        <div class="dash-mid back-white">
-            <div class="user-table">
-              <div class="row table-item table-head">
-                  <div class="col-xs-5">Name <i class="fa fa-long-arrow-up"></i></div>
-                  <div class="col-xs-2 text-center">Status</div>
-                  <div class="col-xs-3 text-center">Last Modified</div>
-                  <div class="col-xs-1 text-center">Version</div>
-                  <div class="col-xs-1 text-right"><i class="fa fa-cog"></i></div>
-              </div>
-              <div class="table-tbody">
-                <div class="row table-item" ng-repeat="profile in profilesList">
-                  <div class="col-xs-5"><img src="img/profile.png" alt=""> <span ng-bind="profile.name">UM Profile - System Default</span></div>
-                  <div class="col-xs-2 text-center" ng-bind="profile.status">Non Current</div>
-                  <div class="col-xs-3 text-center" ng-bind="profile.lastModified | date:'MMM dd, yyyy'">Apr 25, 2010</div>
-                  <div class="col-xs-1 text-center" ng-bind="profile.version">0</div>
-                  <div class="col-xs-1 text-center"></div>
-                </div>
-                <div class="row table-item">
-                  <div class="col-xs-5"><img src="img/profile.png" alt=""> <span>UM Profile - ABC Limited</span></div>
-                  <div class="col-xs-2 text-center">Published - Active</div>
-                  <div class="col-xs-3 text-center">Apr 25, 2010</div>
-                  <div class="col-xs-1 text-center">1</div>
-                  <div class="col-xs-1 text-center"></div>
-                </div>
-              </div>
-            </div>
-        </div> -->
-
-<!-- <<<<<<< HEAD -->
-
-
-
-
-
-
-
-
           <div class="container-fluid noPad ">
             <div class="container dash-bottom">
                <div class="dash-left">
@@ -112,57 +65,16 @@
                 <div class="col-xs-1 text-right"><i class="fa fa-cog"></i></div>
             </div>
             <div class="table-tbody">
-             <div class="row table-item">
-                <div class="col-xs-5"><img src="img/profile.png" alt=""> <span>UM Profile - System Default</span></div>
-                <div class="col-xs-2 text-center">Non Current</div>
-                <div class="col-xs-2 text-center">Apr 25, 2010</div>
-                <div class="col-xs-2 text-center">0</div>
+             <div class="row table-item" ng-repeat="profile in profilesList">
+                <div class="col-xs-5"><img src="img/profile.png" alt=""> <span ng-bind="profile.name"></span></div>
+                <div class="col-xs-2 text-center" ng-bind="profile.name"></div>
+                <div class="col-xs-2 text-center" ng-bind="profile.lastModified | date:'MMM dd, yyyy'"></div>
+                <div class="col-xs-2 text-center" ng-bind="profile.version"></div>
                 <div class="col-xs-1 text-center"></div>
             </div>
-               <div class="row table-item">
-                <div class="col-xs-5"><img src="img/profile.png" alt=""> <span>UM Profile - ABC Limited</span></div>
-                <div class="col-xs-2 text-center">Published - Active</div>
-                <div class="col-xs-2 text-center">Apr 25, 2010</div>
-                <div class="col-xs-2 text-center">1</div>
-                <div class="col-xs-1 text-center"></div>
             </div>
-
-
-            </div>
-
-
                     </div>
                 </div>
-<!--                 <div class="dash-right tab-back">
-
-                               <div class="filter-section pull-left">
-                <div class="btn-group filter-group">
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-filter"></i> Filter Name <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Filter 1</a></li>
-                    <li><a href="#">Filter 2</a></li>
-                  </ul>
-                </div>
-                </div>
-                <div class="pull-right filter-close"><i class="fa fa-times"></i></div>
-
-                              <div class="right-tab">
-
-                  Nav tabs
-                  <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#first" aria-controls="home" role="tab" data-toggle="tab">Details</a></li>
-                    <li role="presentation"><a href="#second" aria-controls="profile" role="tab" data-toggle="tab">Description</a></li>
-                  </ul>
-
-                  Tab panes
-                  <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active text-center" id="first">
-                        <img src="img/comment.png" alt="">
-                        <br><br>
-                        Select a Filter to view its details -->
-<!-- ======= -->
         <div class="dash-right tab-back">
           <div class="filter-section pull-left">
             <div class="btn-group filter-group">
@@ -193,7 +105,6 @@
             </div>
           </div>
         </div>
-<!-- >>>>>>> ce9d1dd92f567b5cf9d0dc7f95ac0f8349a5dfea -->
     </div>
   </div>
 </div>
