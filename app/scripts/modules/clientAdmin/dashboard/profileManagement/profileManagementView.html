@@ -58,14 +58,26 @@
                <div class="dash-mid back-white">
                     <div class="user-table">
             <div class="row table-item table-head">
-                <div class="col-xs-5">Name <span class="sort"><i class="fa fa-caret-up"></i></span></div>
-                <div class="col-xs-2 text-center">Status <span class="sort"><i class="fa fa-caret-down"></i></span></div>
-                <div class="col-xs-2 text-center">Last Modified <span class="sort"><i class="fa fa-caret-up"></i></span></div>
-                <div class="col-xs-2 text-center">Version <span class="sort"><i class="fa fa-caret-down"></i></span></div>
+                <div class="col-xs-5">Name 
+                  <span class="sort" ng-class="{active:predicate == 'name' && !reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-up"></i></span>
+                  <span class="sort" ng-class="{active:predicate == 'name' && reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-down"></i></span>
+                </div>
+                <div class="col-xs-2 text-center">Status 
+                  <span class="sort" ng-class="{active:predicate == 'status' && !reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-up"></i></span>
+                  <span class="sort" ng-class="{active:predicate == 'status' && reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-down"></i></span>
+                </div>
+                <div class="col-xs-2 text-center">Last Modified 
+                  <span class="sort" ng-class="{active:predicate == 'lastModified' && !reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-up"></i></span>
+                  <span class="sort" ng-class="{active:predicate == 'lastModified' && reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-down"></i></span>
+                </div>
+                <div class="col-xs-2 text-center">Version 
+                  <span class="sort" ng-class="{active:predicate == 'version' && !reverse}" ng-click="reverse = predicate == 'version' && !reverse; predicate = 'version'"><i class="fa fa-caret-up"></i></span>
+                  <span class="sort" ng-class="{active:predicate == 'version' && reverse}" ng-click="reverse = predicate == 'version' && !reverse; predicate = 'version'"><i class="fa fa-caret-down"></i></span>
+                </div>
                 <div class="col-xs-1 text-right"><i class="fa fa-cog"></i></div>
             </div>
             <div class="table-tbody">
-             <div class="row table-item" ng-repeat="profile in profilesList | filter:query">
+             <div class="row table-item" ng-repeat="profile in profilesList | filter:query | orderBy:predicate:reverse">
                 <div class="col-xs-5"><img src="img/profile.png" alt=""> <span ng-bind="profile.name"></span></div>
                 <div class="col-xs-2 text-center" ng-bind="profile.status"></div>
                 <div class="col-xs-2 text-center" ng-bind="profile.lastModified | date:'MMM dd, yyyy'"></div>
