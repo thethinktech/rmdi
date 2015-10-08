@@ -440,7 +440,9 @@ left: 91%;
 .reg-container{
     margin-top:50px
 }
-
+.userpage_logo {
+    width: 100px;
+}
 
 @media (max-width:1099px){
 
@@ -463,3 +465,25 @@ left: 91%;
     .reg-name,.logo-name{
          width:100%
     }
+}
+
+.tab_item{
+  display: none;
+}
+.tab_item.active{
+  display:block;
+}
+.top_tab_content{
+      border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-right: 10px;
+    padding: 20px;
+    min-height: 620px
+}
+.tab_handle.active{
+  color:#888
+}
+.icon_dash{
+
+  margin-top: -40px
+}
