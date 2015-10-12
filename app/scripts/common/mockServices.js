@@ -107,28 +107,24 @@ define(['angular'], function (angular) {
             {
                 "id" : 5,
                 "required" : true,
-                "displayLabel" : "Role",
-                "placeholder" : "Role",
+                "displayLabel" : "Status",
+                "placeholder" : "Status",
                 "type" : "DROPDOWNLIST",
-                "defaultValue" : "Select Role",
+                "defaultValue" : "Select Status",
                 "validationExp" : "",
-                "name" : "Role",
+                "name" : "Status",
                 "customizationValues" : [
                 {
                     "id" : 1,
-                    "valueText" : "Admin"
+                    "valueText" : "Delignate (Add)"
                 },
                 {
                     "id" : 2,
-                    "valueText" : "Super Admin"
+                    "valueText" : "Archived"
                 },
                 {
                     "id" : 3,
-                    "valueText" : "Data Analyst"
-                },
-                {
-                    "id" : 4,
-                    "valueText" : "Analyst"
+                    "valueText" : "Deleted"
                 }]
             },
             {
@@ -192,6 +188,26 @@ define(['angular'], function (angular) {
                 "defaultValue" : "",
                 "validationExp" : "",
                 "name" : "Address"
+            },
+            {
+                "id" : 6,
+                "required" : true,
+                "displayLabel" : "Start Date",
+                "placeholder" : "Start Date",
+                "type" : "DATE",
+                "defaultValue" : "",
+                "validationExp" : "",
+                "name" : "Start Date"
+            },
+            {
+                "id" : 7,
+                "required" : true,
+                "displayLabel" : "End Date",
+                "placeholder" : "End Date",
+                "type" : "DATE",
+                "defaultValue" : "",
+                "validationExp" : "",
+                "name" : "End Date"
             }
         ];
 

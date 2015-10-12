@@ -44,10 +44,14 @@ define(['angular','common/header/headerDirective','common/footer/footerDirective
 													'placeholder="{{customization.placeholder}}" ng-model="customization.dataValue">';
 					break;
 
+					case 'DATE' : template = '<input type="{{customization.type}}" class="form-control" ng-required="customization.required"' +
+													'placeholder="{{customization.placeholder}}" ng-model="customization.dataValue">';
+					break;
+
 					case 'CALENDAR' : template = '';
 					break;
 
-					case 'TEXTAREA' : template = '<textarea rows="4" cols="50" class="form-control" ng-required="customization.required"' +
+					case 'TEXTAREA' : template = '<textarea rows="4" cols="50" class="form-control" style="margin-bottom:15px;" ng-required="customization.required"' +
 													'placeholder="{{customization.placeholder}}" ng-model="customization.dataValue">' +
 													'</textarea>';
 					break;
@@ -90,6 +94,17 @@ define(['angular','common/header/headerDirective','common/footer/footerDirective
 		  }
 		}
 	});
+
+	module.directive('showtab',function () {
+        return {
+            link: function (scope, element, attrs) {
+                element.click(function(e) {
+                    e.preventDefault();
+                    $(element).tab('show');
+                });
+            }
+        };
+    });
 
 	return module;
 });

@@ -56,6 +56,14 @@
                     </div>
                     <div id="collapse3" class="panel-collapse in" role="tabpanel" aria-labelledby="heading3">
                         <div class="panel-body">
+
+                            <tags-input ng-model="addUserObj.selectedRoles" display-property="text" placeholder="Select a Role" replace-spaces-with-dashes="false">
+                              <auto-complete source="loadLabels(roleList,$query)"
+                                             min-length="0"
+                                             load-on-focus="true"
+                                             load-on-empty="true"
+                                             max-results-to-show="32"></auto-complete>
+                            </tags-input>
                         	<!-- <div class="reg-top">
                             	<input type="text" class="form-control roles-search" placeholder="search">
                         	</div> -->

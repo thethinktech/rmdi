@@ -16,7 +16,8 @@ define([
         'ngSanitize',
         'angular-md5',
         'ngDraggable',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'ngTagsInput'
     ]);
 
     app.config(routes);

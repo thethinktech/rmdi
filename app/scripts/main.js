@@ -15,7 +15,8 @@ require.config({
 		store: '../bower_components/store2/src/store2',
 		angularMd5: '../bower_components/angular-md5/angular-md5',
 		draggable: '../bower_components/ngDraggable/ngDraggable',        //Ref : https://github.com/fatlinesofcode/ngDraggable
-		UIBootstrap: '../bower_components/angular-bootstrap/ui-bootstrap-tpls' 
+		UIBootstrap: '../bower_components/angular-bootstrap/ui-bootstrap-tpls',
+		ngTagInput: '../bower_components/ng-tags-input/ng-tags-input'				//Ref : http://mbenford.github.io/ngTagsInput/
 	},
 	waitSeconds:600,
 	shim: {
@@ -41,6 +42,9 @@ require.config({
 			deps:['angular','jquery']
 		},
 		'UIBootstrap': {
+			deps: ['angular']
+		},
+		'ngTagInput' : {
 			deps: ['angular']
 		}
 	},
