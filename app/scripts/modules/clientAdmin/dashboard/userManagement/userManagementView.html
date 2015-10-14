@@ -61,7 +61,7 @@
         <div class="user-table">
           <div class="row table-item table-head">
 
-            <div class="col-xs-5">Name
+            <div class="col-xs-6">Name
               <span class="sort" ng-class="{active:predicate == 'name' && !reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-up"></i></span>
               <span class="sort" ng-class="{active:predicate == 'name' && reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-down"></i></span>
             </div>
@@ -69,11 +69,12 @@
               <span class="sort" ng-class="{active:predicate == 'status' && !reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-up"></i></span>
               <span class="sort" ng-class="{active:predicate == 'status' && reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-down"></i></span>
             </div>
-            <div class="col-xs-2 padzero text-center">Last Modified
+            <!-- Remove commented portion to delete last modified-->
+            <!--<div class="col-xs-2 padzero text-center">Last Modified
               <span class="sort" ng-class="{active:predicate == 'lastModified' && !reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-up"></i></span>
               <span class="sort" ng-class="{active:predicate == 'lastModified' && reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-down"></i></span>
-            </div>
-            <div class="col-xs-2 text-center">Role
+            </div>-->
+            <div class="col-xs-3 text-center">Role
               <span class="sort" ng-class="{active:predicate == 'role.valueText' && !reverse}" ng-click="reverse = predicate == 'role.valueText' && !reverse; predicate = 'role.valueText'"><i class="fa fa-caret-up"></i></span>
               <span class="sort" ng-class="{active:predicate == 'role.valueText' && reverse}" ng-click="reverse = predicate == 'role.valueText' && !reverse; predicate = 'role.valueText'"><i class="fa fa-caret-down"></i></span>
             </div>
@@ -135,7 +136,7 @@
   </div>
 </div>
 
-<div class="account_popout active">
+<div class="account_popout">
 <div class="popout_img">
 <img src="img/profile.png" alt="">
 <div class="change_photo">

@@ -122,6 +122,8 @@ img.user-logo {
     float:left;
    margin-top: 16px;
     margin-left: 10px;
+        font-size: 15px;
+    font-weight: bold;
 }
 .user-name-p {
     float: left;
