@@ -59,19 +59,19 @@
                     <div class="user-table">
             <div class="row table-item table-head">
 
-                <div class="col-xs-5">Name 
+                <div class="col-xs-5">Name
                   <span class="sort" ng-class="{active:predicate == 'name' && !reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-up"></i></span>
                   <span class="sort" ng-class="{active:predicate == 'name' && reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-down"></i></span>
                 </div>
-                <div class="col-xs-2 text-center">Status 
+                <div class="col-xs-2 text-center">Status
                   <span class="sort" ng-class="{active:predicate == 'status' && !reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-up"></i></span>
                   <span class="sort" ng-class="{active:predicate == 'status' && reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-down"></i></span>
                 </div>
-                <div class="col-xs-2 padzero text-center">Last Modified 
+                <div class="col-xs-2 padzero text-center">Last Modified
                   <span class="sort" ng-class="{active:predicate == 'lastModified' && !reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-up"></i></span>
                   <span class="sort" ng-class="{active:predicate == 'lastModified' && reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-down"></i></span>
                 </div>
-                <div class="col-xs-2 text-center">Version 
+                <div class="col-xs-2 text-center">Version
                   <span class="sort" ng-class="{active:predicate == 'version' && !reverse}" ng-click="reverse = predicate == 'version' && !reverse; predicate = 'version'"><i class="fa fa-caret-up"></i></span>
                   <span class="sort" ng-class="{active:predicate == 'version' && reverse}" ng-click="reverse = predicate == 'version' && !reverse; predicate = 'version'"><i class="fa fa-caret-down"></i></span>
                 </div>
@@ -121,4 +121,34 @@
         </div>
     </div>
   </div>
+</div>
+
+
+<div class="account_popout active">
+<div class="popout_img">
+<img src="img/profile.png" alt="">
+<div class="change_photo">
+    Change Photo
+</div>
+<div class="popout_profile">
+<span class="p_name">Rum N Coke</span>
+<span class="p_email">a@gmail.com</span>
+<span class="p_privacy">
+    <a href="">Account</a> - <a href="">Privacy</a>
+</span>
+<a href="" class="noPad">
+    <div class="p_btn">
+        My Account
+    </div>
+</a>
+</div>
+
+
+</div>
+<div class="p_signout">
+<a href="" class="noPad">
+    <div class="p_signout_btn">Sign out</div>
+</a>
+<div class="clearfix"></div>
+</div>
 </div>
