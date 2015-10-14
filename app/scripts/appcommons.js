@@ -11,7 +11,8 @@ define(['angular',
     'store',
     'angularMd5',
     'draggable',
-    'UIBootstrap'
+    'UIBootstrap',
+    'ngTagInput'
     ], 
     function (angular, angularAMD, angularRoute, angularMocks) {
         'use strict';

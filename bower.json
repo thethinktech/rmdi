@@ -20,6 +20,7 @@
     "store2" : "latest",
     "angular-md5": "~0.1.7",
     "ngDraggable" : "latest",
-    "angular-bootstrap" : "latest"
+    "angular-bootstrap" : "latest",
+    "ng-tags-input" : "latest"
   }
 }
