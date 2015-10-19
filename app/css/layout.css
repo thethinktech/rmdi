@@ -323,10 +323,15 @@
 }
 
 
-.reg-top{
+.reg-top,.role-top{
      width:300px;
     margin:0 auto
 
+}
+
+.role-top .tags{
+ box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    border: 1px solid #ccc
 }
 .reg-top input{
      margin-bottom: 15px;
