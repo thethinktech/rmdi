@@ -230,6 +230,64 @@ img.user-logo {
     height: 600px;
     overflow-y: auto;
 }
+.sort{
+   width: 19px;
+    height: 19px;
+    background: url('../img/sort_both.png');
+    display: inline-block;
+    vertical-align: bottom;
+    cursor: pointer
+}
+.sort.asc{
+    background: url('../img/sort_asc.png');
+}
+.sort.desc{
+    background: url('../img/sort_desc.png');
+}
+.pm-filter{
+        color: #000;
+    font-size: 15px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+.filter_section{
+    /* margin: 5px;
+    margin-top: 0 */
+    border-radius: 0px;
+    margin-bottom: 0px;
+    display: none
+}
+.filter_row{
+     margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center
+}
+.filter_row_item{
+ display: inline-block;
+    width: auto;
+    border-radius: 0
+}
+.filter_divider{
+    color:#31B0D5;
+    width:70%;
+    margin:0px auto;
+    overflow:hidden;
+    text-align:center;
+    line-height:1.2em;
+}
+
+.filter_divider:before, .filter_divider:after{
+    content:"";
+    vertical-align:top;
+    display:inline-block;
+    width:50%;
+    height:0.65em;
+    border-bottom:1px solid #5BC0DE;
+    margin:0 2% 0 -55%;
+}
+.filter_divider:after{
+    margin:0 -55% 0 2%;
+}
 .table-tbody::-webkit-scrollbar {
     width: 7px;
 }
@@ -693,7 +751,7 @@ img.user-logo {
     -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.2);
 }
 .account_popout.active{
-	visibility: visible
+    visibility: visible
 }
 /* .account_popout {
     position: relative;

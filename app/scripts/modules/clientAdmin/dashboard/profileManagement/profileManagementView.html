@@ -24,14 +24,8 @@
     </div>
     <div class="dash-mid">
       <div class="filter-section top-filter pull-left">
-        <div class="btn-group filter-group">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-filter"></i> Filter Name <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Filter 1</a></li>
-            <li><a href="#">Filter 2</a></li>
-          </ul>
+        <div class="pm-filter">
+            <i class="fa fa-filter"></i> Filter Name
         </div>
       </div>
     </div>
@@ -56,24 +50,106 @@
                    </ul>
                </div>
                <div class="dash-mid back-white">
+
+
+
+                            <div class="panel panel-default filter_section">
+                                  <div class="panel-heading">
+                                  <button class="btn btn-default btn-flat btn-sm">Run</button>
+                                  <button class="btn btn-default btn-flat btn-sm">Save</button>
+                                  <button class="btn btn-default btn-flat btn-sm">AND</button>
+                                  <button class="btn btn-default btn-flat btn-sm">OR</button>
+                                  <button class="btn btn-default btn-flat btn-sm">ADD SORT</button>
+                                  <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-thumb-tack"></i></button>
+                                  </div>
+                                  <div class="panel-body">
+                                   <p class="text-center">All of these conditions must be met</p>
+                        <!-- FILTER ROW STARTS-->
+                            <div class="filter_row">
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">Active</option>
+                                </select>
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">is</option>
+                                </select>
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">true</option>
+                                </select>
+                                <button class="btn btn-default btn-flat btn-sm">AND</button>
+                                <button class="btn btn-default btn-flat btn-sm">OR</button>
+                                <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-times"></i></button>
+                                <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-search"></i></button>
+                            </div>
+                    <!-- FILTER ROW ENDS-->
+
+                    <!-- FILTER DIVIDER STARTS-->
+                                 <div class="filter_divider">OR</div>
+                    <!-- FILTER DIVIDER ENDS-->
+
+
+                        <!-- FILTER ROW STARTS-->
+                                 <div class="filter_row">
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">Active</option>
+                                </select>
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">is</option>
+                                </select>
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">true</option>
+                                </select>
+                                <button class="btn btn-default btn-flat btn-sm">AND</button>
+                                <button class="btn btn-default btn-flat btn-sm">OR</button>
+                                <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-times"></i></button>
+                                <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-search"></i></button>
+                            </div>
+                            <!-- FILTER ROW ENDS-->
+
+
+
+                             <div class="filter_row">
+                                  <button class="btn btn-success btn-flat btn-sm">RUN</button>
+                            </div>
+
+                                  </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
                     <div class="user-table">
             <div class="row table-item table-head">
 
-                <div class="col-xs-5">Name
-                  <span class="sort" ng-class="{active:predicate == 'name' && !reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-up"></i></span>
-                  <span class="sort" ng-class="{active:predicate == 'name' && reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-down"></i></span>
+                <div class="col-xs-3">Name
+                  <!-- <span class="sort" ng-class="{active:predicate == 'name' && !reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-up"></i></span>
+                  <span class="sort" ng-class="{active:predicate == 'name' && reverse}" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'"><i class="fa fa-caret-down"></i></span> -->
+                  <span class="sort"></span>
                 </div>
                 <div class="col-xs-2 text-center">Status
-                  <span class="sort" ng-class="{active:predicate == 'status' && !reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-up"></i></span>
-                  <span class="sort" ng-class="{active:predicate == 'status' && reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-down"></i></span>
+                 <!--  <span class="sort" ng-class="{active:predicate == 'status' && !reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-up"></i></span>
+                  <span class="sort" ng-class="{active:predicate == 'status' && reverse}" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'"><i class="fa fa-caret-down"></i></span> -->
+                  <span class="sort asc"></span>
                 </div>
-                <div class="col-xs-2 padzero text-center">Last Modified
-                  <span class="sort" ng-class="{active:predicate == 'lastModified' && !reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-up"></i></span>
-                  <span class="sort" ng-class="{active:predicate == 'lastModified' && reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-down"></i></span>
+                <div class="col-xs-2 padzero text-center">Created By
+                <!--   <span class="sort" ng-class="{active:predicate == 'lastModified' && !reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-up"></i></span>
+                  <span class="sort" ng-class="{active:predicate == 'lastModified' && reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-down"></i></span> -->
+                  <span class="sort"></span>
+                </div>
+                <div class="col-xs-2 padzero text-center">Created Date
+                <!--   <span class="sort" ng-class="{active:predicate == 'lastModified' && !reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-up"></i></span>
+                  <span class="sort" ng-class="{active:predicate == 'lastModified' && reverse}" ng-click="reverse = predicate == 'lastModified' && !reverse; predicate = 'lastModified'"><i class="fa fa-caret-down"></i></span> -->
+                  <span class="sort"></span>
                 </div>
                 <div class="col-xs-2 text-center">Version
-                  <span class="sort" ng-class="{active:predicate == 'version' && !reverse}" ng-click="reverse = predicate == 'version' && !reverse; predicate = 'version'"><i class="fa fa-caret-up"></i></span>
-                  <span class="sort" ng-class="{active:predicate == 'version' && reverse}" ng-click="reverse = predicate == 'version' && !reverse; predicate = 'version'"><i class="fa fa-caret-down"></i></span>
+                  <!-- <span class="sort" ng-class="{active:predicate == 'version' && !reverse}" ng-click="reverse = predicate == 'version' && !reverse; predicate = 'version'"><i class="fa fa-caret-up"></i></span>
+                  <span class="sort" ng-class="{active:predicate == 'version' && reverse}" ng-click="reverse = predicate == 'version' && !reverse; predicate = 'version'"><i class="fa fa-caret-down"></i></span> -->
+                  <span class="sort"></span>
                 </div>
 
                 <div class="col-xs-1 text-right"><i class="fa fa-cog"></i></div>
@@ -124,7 +200,7 @@
 </div>
 
 
-<div class="account_popout active">
+<div class="account_popout">
 <div class="popout_img">
 <img src="img/profile.png" alt="">
 <div class="change_photo">
@@ -152,3 +228,19 @@
 <div class="clearfix"></div>
 </div>
 </div>
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+
+   $(document).on('click','.pm-filter',function(){
+       $('.filter_section').slideToggle();
+
+   });
+
+});
+</script>
