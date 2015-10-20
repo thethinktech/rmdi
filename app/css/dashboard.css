@@ -38,6 +38,14 @@ height: 100%
     float:left;
 
 }
+
+.mid85{
+     width: 85%
+}
+.tab_content_container{
+ min-height: 620px;
+ border-left: 1px solid #ccc
+}
 .dash-right{
      width:25%;
     float:left
