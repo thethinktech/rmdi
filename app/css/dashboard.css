@@ -330,6 +330,22 @@ img.user-logo {
     width: 100%;
     margin-top: 10px;
 }
+
+.op_btns:hover i{
+    font-weight: bold
+}
+.op_btns.op_edit {
+    color: #45ABCD;
+}
+.op_btns.op_save {
+    color: green;
+}
+.op_btns.op_del {
+    color: red;
+}
+.op_btns_section {
+    margin-top: 10px;
+}
 .table-tbody::-webkit-scrollbar {
     width: 7px;
 }
