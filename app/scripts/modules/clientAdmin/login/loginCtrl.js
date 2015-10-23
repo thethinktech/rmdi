@@ -12,6 +12,10 @@ define(['app'], function (app) {
 				{
 					$location.path('dashboard');
 				}
+				else if($scope.loginRequest.username == 'user@gmail.com' && $scope.loginRequest.password == 'user')
+				{
+					$location.path('user');
+				}
 				else
 				{
 					alert("Invalid Credentials");
