@@ -241,17 +241,33 @@ img.user-logo {
 .sort{
    width: 19px;
     height: 19px;
-    background: url('../img/sort_both.png');
+    /* background: url('../img/sort_both.png'); */
     display: inline-block;
     vertical-align: bottom;
-    cursor: pointer
+    cursor: pointer;
+    position: relative
 }
-.sort.asc{
+.sort_asc{
+     width: 9px;
+    height: 7px;
+    position: absolute;
+    top: 1px;
     background: url('../img/sort_asc.png');
 }
-.sort.desc{
+.sort_desc{
+     width: 9px;
+    height: 7px;
+    position: absolute;
+    bottom: 1px;
     background: url('../img/sort_desc.png');
 }
+.sort_asc.active{
+    background: url('../img/sort_asc_active.png');
+}
+.sort_desc.active{
+    background: url('../img/sort_desc_active.png');
+}
+
 .pm-filter{
         color: #000;
     font-size: 15px;
