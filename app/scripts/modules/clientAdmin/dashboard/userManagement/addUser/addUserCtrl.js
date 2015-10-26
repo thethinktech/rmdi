@@ -12,34 +12,37 @@ define(['app'], function (app) {
 		$scope.roleList = [
                     { 
                     	"id" : 1,
-                    	"text": 'Admin' 
+                    	"name": "Admin",
+                    	"description" : ""
                     },
                     { 
                     	"id" : 2,
-                    	"text": 'Super Admin' 
+                    	"name": "Super Admin",
+                    	"description" : ""
                     },
                     { 
                     	"id" : 3,
-                    	"text": 'Data Analyst' 
+                    	"name": "Data Analyst",
+                    	"description" : ""
                     },
                     { 
                     	"id" : 4,
-                    	"text": 'Analyst' 
+                    	"name": "Analyst",
+                    	"description" : ""
                     }
                 ];
 
         $scope.loadLabels = function(labels,$query) {
             return labels.filter(function(label) {
-                return label.text.toLowerCase().indexOf($query.toLowerCase()) != -1;
+                return label.name.toLowerCase().indexOf($query.toLowerCase()) != -1;
             });
         };
 
 		$scope.addUser = function(){
-			console.log($scope.manadatoryFieldsList);
-			// $scope.addUserObj.status = "Active";
-			$scope.addUserObj.lastModified = new Date();
-			$scope.addUserObj.name = angular.copy($scope.manadatoryFieldsList[2].dataValue);
+			$scope.addUserObj.name = angular.copy($scope.manadatoryFieldsList[0].dataValue);
 			$scope.addUserObj.status = angular.copy($scope.manadatoryFieldsList[4].dataValue);
+			$scope.addUserObj.startDate = angular.copy($scope.additionalFieldsList[5].dataValue);
+			$scope.addUserObj.endDate = angular.copy($scope.additionalFieldsList[6].dataValue);
 			$scope.addUserObj.manadatoryFieldsList = angular.copy($scope.manadatoryFieldsList);
 			$scope.addUserObj.additionalFieldsList = angular.copy($scope.additionalFieldsList);
 			var temp = [];

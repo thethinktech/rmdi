@@ -116,15 +116,18 @@ define(['angular'], function (angular) {
                 "customizationValues" : [
                 {
                     "id" : 1,
-                    "valueText" : "Delignate (Add)"
+                    "name" : "Delignate (Add)",
+                    "description" : ""
                 },
                 {
                     "id" : 2,
-                    "valueText" : "Archived"
+                    "name" : "Archived",
+                    "description" : ""
                 },
                 {
                     "id" : 3,
-                    "valueText" : "Deleted"
+                    "name" : "Deleted",
+                    "description" : ""
                 }]
             },
             {

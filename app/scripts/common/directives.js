@@ -35,7 +35,7 @@ define(['angular','common/header/headerDirective','common/footer/footerDirective
 					// break;
 
 					case 'DROPDOWNLIST' : template = '<select class="form-control" style="margin-bottom:15px;" ng-required="customization.required" ng-model="customization.dataValue"' +
-													 'ng-options="value as value.valueText for value in customization.customizationValues">' + 
+													 'ng-options="value as value.name for value in customization.customizationValues">' + 
 													 '<option value="" ng-bind="::customization.defaultValue"></option>' +
 													 '</select>';
 					break;
