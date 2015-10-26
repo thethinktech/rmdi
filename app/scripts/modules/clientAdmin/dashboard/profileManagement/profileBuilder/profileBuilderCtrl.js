@@ -442,6 +442,29 @@ define(['app'], function (app) {
 			"imgUrl" : "img/group.png"
 		}
 	];
+
+	$scope.profileStatusList = [
+		{
+			"id" : 1,
+			"name" : "Active",
+			"description" : "Active"
+		},
+		{
+			"id" : 2,
+			"name" : "Inactive",
+			"description" : "Inactive"
+		},
+		{
+			"id" : 3,
+			"name" : "Published",
+			"description" : "Published"
+		},
+		{
+			"id" : 4,
+			"name" : "Archieved",
+			"description" : "Archieved"
+		}
+	];
 	$scope.centerAnchor = true;
 
 	$scope.showPropertiesModal = function(value){
@@ -487,9 +510,15 @@ define(['app'], function (app) {
 		UTILS.setInLocalStorage("profileBuilderObj",$scope.profileBuilderObj);
 	};
 
+	$scope.openStatusModal = function(){
+		$scope.statusModalInstance = COMMONMODAL.showModal('scripts/modules/clientAdmin/dashboard/profileManagement/profileBuilder/profileStatusModalView.html',$scope,'');
+	};
+
 	$scope.publishProfile = function(){
-		$scope.profileBuilderObj.status = "Published";
-		$scope.profileBuilderObj.lastModified = new Date();
+		$scope.statusModalInstance.close(true);
+		// $scope.profileBuilderObj.status = "Published";
+		$scope.profileBuilderObj.createdBy = "Admin";
+		$scope.profileBuilderObj.createdDate = new Date();
 		$scope.profileBuilderObj.version = 0;
 		var temp = [];
 		if(UTILS.getFromLocalStorage("profilesList")){
@@ -498,6 +527,10 @@ define(['app'], function (app) {
 		temp.push($scope.profileBuilderObj);
 		UTILS.setInLocalStorage("profilesList",temp);
 		$location.path('dashboard/profilemanagement');
+	};
+
+	$scope.closeStatusModal = function(){
+	    $scope.statusModalInstance.dismiss('cancel');
 	};
 
 	}]);

@@ -132,9 +132,9 @@
                   </span>
                 </div>
                 <div class="col-xs-2 text-center">Status
-                  <span class="sort" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'">
-                      <span class="sort_asc" ng-class="{active:predicate == 'status' && !reverse}"></span>
-                      <span class="sort_desc" ng-class="{active:predicate == 'status' && reverse}"></span>
+                  <span class="sort" ng-click="reverse = predicate == 'status.name' && !reverse; predicate = 'status.name'">
+                      <span class="sort_asc" ng-class="{active:predicate == 'status.name' && !reverse}"></span>
+                      <span class="sort_desc" ng-class="{active:predicate == 'status.name' && reverse}"></span>
                   </span>
                 </div>
                 <div class="col-xs-2 padzero text-center">Created By
@@ -144,9 +144,9 @@
                   </span>
                 </div>
                 <div class="col-xs-2 padzero text-center">Created Date
-                  <span class="sort" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'">
-                      <span class="sort_asc" ng-class="{active:predicate == 'name' && !reverse}"></span>
-                      <span class="sort_desc" ng-class="{active:predicate == 'name' && reverse}"></span>
+                  <span class="sort" ng-click="reverse = predicate == 'createdDate' && !reverse; predicate = 'createdDate'">
+                      <span class="sort_asc" ng-class="{active:predicate == 'createdDate' && !reverse}"></span>
+                      <span class="sort_desc" ng-class="{active:predicate == 'createdDate' && reverse}"></span>
                   </span>
                 </div>
                 <div class="col-xs-2 text-center">Version
@@ -161,8 +161,8 @@
             <div class="table-tbody">
              <div class="row table-item" ng-repeat="profile in profilesList | filter:query | orderBy:predicate:reverse">
                 <div class="col-xs-5"><img src="img/profile.png" alt=""> <span ng-bind="profile.name"></span></div>
-                <div class="col-xs-2 text-center" ng-bind="profile.status"></div>
-                <div class="col-xs-2 text-center" ng-bind="profile.lastModified | date:'MMM dd, yyyy'"></div>
+                <div class="col-xs-2 text-center" ng-bind="profile.status.name"></div>
+                <div class="col-xs-2 text-center" ng-bind="profile.createdDate | date:'MMM dd, yyyy'"></div>
                 <div class="col-xs-2 text-center" ng-bind="profile.version"></div>
                 <div class="col-xs-1 text-center"></div>
             </div>
