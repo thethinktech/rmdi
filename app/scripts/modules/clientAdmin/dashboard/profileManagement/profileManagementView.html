@@ -162,7 +162,7 @@
              <div class="row table-item" ng-repeat="profile in profilesList | filter:query | orderBy:predicate:reverse">
                 <div class="col-xs-3"><img src="img/profile.png" alt=""> <span ng-bind="profile.name"></span></div>
                 <div class="col-xs-2 text-center" ng-bind="profile.status.name"></div>
-                <div class="col-xs-2 text-center" ng-bind="profile.status.name"></div>
+                <div class="col-xs-2 text-center" ng-bind="profile.createdBy | date:'MMM dd, yyyy'"></div>
                 <div class="col-xs-2 text-center" ng-bind="profile.createdDate | date:'MMM dd, yyyy'"></div>
                 <div class="col-xs-2 text-center" ng-bind="profile.version"></div>
                 <div class="col-xs-1 text-center"></div>

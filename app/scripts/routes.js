@@ -56,14 +56,14 @@ define(['angularAMD'],
             controllerUrl: 'modules/superAdmin/superAdminCtrl'
         }));
 
-
-         $routeProvider.when('/superadmin/configureobjectgrid', angularAMD.route({
+        //Temporary Designer Routes
+        $routeProvider.when('/superadmin/configureobjectgrid', angularAMD.route({
             templateUrl: 'scripts/modules/superAdmin/configureObjectGrid.html',
             controller: 'configureObjectGridCtrl',
             controllerUrl: 'modules/superAdmin/configureObjectGridCtrl'
         }));
 
-         $routeProvider.when('/superadmin/sousermanagement', angularAMD.route({
+        $routeProvider.when('/superadmin/sousermanagement', angularAMD.route({
             templateUrl: 'scripts/modules/superAdmin/systemObjectUserManagement.html',
             controller: 'systemObjectUserManagementCtrl',
             controllerUrl: 'modules/superAdmin/systemObjectUserManagementCtrl'
