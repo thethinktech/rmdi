@@ -1,0 +1,291 @@
+<div class="main">
+  <div class="container-fluid noPad ">
+    <div class="container dash-top">
+        <div class="dash-left"><img src="img/logo.png" alt="" class="page-logo"></div>
+        <div class="dash-mid">
+            <div class="input-group search-group">
+              <input type="text" class="form-control" placeholder="Search Name" ng-model="query">
+              <button class="input-group-addon" ><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <div class="dash-right">
+            <div class="profile-right">
+                <div class="profile-item text-center">Admin</div>
+                <div class="profile-item text-center"><i class="fa fa-th"></i></div>
+                <div class="profile-item text-center"><span class="profile-notif"><i class="fa fa-bell"></i></span></div>
+                <div class="profile-item text-center img-circle profile-img"><img src="img/profile.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container-fluid noPad ">
+    <div class="container dash-second">
+      <div class="dash-left"><img src="img/profile.png" alt="" class="user-logo"> <h4 class="user-name-p">System Object Coniguration</h4></div>
+      <div class="dash-mid">
+        <div class="filter-section top-filter pull-left">
+        <div class="pm-filter">
+            <button class="btn btn-default btn-sm btn-flat"><i class="fa fa-filter"></i></button>
+        </div>
+      </div>
+      </div>
+
+      <div class="dash-right">
+        <div class="row right-settings">
+          <div class="col-xs-6 text-right"><i class="fa fa-th-large"></i></div>
+          <div class="col-xs-4 text-right"><i class="fa fa-exclamation-circle fa-rotate-180"></i></div>
+          <div class="col-xs-2 text-left"><i class="fa fa-cog"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid noPad full_height">
+    <div class="container dash-bottom full_height">
+      <div class="dash-left full_height grayBack">
+        <button class="btn btn-new" ng-click="goToUrl('/superadmin/sousermanagement')">NEW</button>
+        <ul class="left-btns">
+          <li class="active"><i class="fa fa-clock-o"></i> <span>Recent</span></li>
+          <li><i class="fa fa-star"></i> <span>Starred</span></li>
+          <li><i class="fa fa-trash-o"></i> <span>Trash</span></li>
+        </ul>
+      </div>
+
+      <div class="dash-mid back-white">
+
+
+       <div class="panel panel-default filter_section">
+                                  <div class="panel-heading">
+                                  <button class="btn btn-default btn-flat btn-sm">Run</button>
+                                  <button class="btn btn-default btn-flat btn-sm">Save</button>
+                                  <button class="btn btn-default btn-flat btn-sm">AND</button>
+                                  <button class="btn btn-default btn-flat btn-sm">OR</button>
+                                  <button class="btn btn-default btn-flat btn-sm">ADD SORT</button>
+                                  <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-thumb-tack"></i></button>
+                                  </div>
+                                  <div class="panel-body">
+                                   <p class="text-center">All of these conditions must be met</p>
+                        <!-- FILTER ROW STARTS-->
+                            <div class="filter_row">
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">Active</option>
+                                </select>
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">is</option>
+                                </select>
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">true</option>
+                                </select>
+                                <button class="btn btn-default btn-flat btn-sm">AND</button>
+                                <button class="btn btn-default btn-flat btn-sm">OR</button>
+                                <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-times"></i></button>
+                                <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-search"></i></button>
+                            </div>
+                    <!-- FILTER ROW ENDS-->
+
+                    <!-- FILTER DIVIDER STARTS-->
+                                 <div class="filter_divider">OR</div>
+                    <!-- FILTER DIVIDER ENDS-->
+
+
+                        <!-- FILTER ROW STARTS-->
+                                 <div class="filter_row">
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">Active</option>
+                                </select>
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">is</option>
+                                </select>
+                                <select name="" class="form-control input-sm filter_row_item">
+                                    <option value="">true</option>
+                                </select>
+                                <button class="btn btn-default btn-flat btn-sm">AND</button>
+                                <button class="btn btn-default btn-flat btn-sm">OR</button>
+                                <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-times"></i></button>
+                                <button class="btn btn-default btn-flat btn-sm"><i class="fa fa-search"></i></button>
+                            </div>
+                            <!-- FILTER ROW ENDS-->
+
+
+
+                             <div class="filter_row">
+                                  <button class="btn btn-success btn-flat btn-sm">RUN</button>
+                            </div>
+
+                                  </div>
+                                </div>
+
+
+
+        <div class="user-table">
+          <div class="row table-item table-head">
+
+            <div class="col-xs-3">Name
+              <span class="sort" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'">
+                  <span class="sort_asc" ng-class="{active:predicate == 'name' && !reverse}"></span>
+                  <span class="sort_desc" ng-class="{active:predicate == 'name' && reverse}"></span>
+              </span>
+            </div>
+            <div class="col-xs-3 text-center">Status
+               <span class="sort" ng-click="reverse = predicate == 'status' && !reverse; predicate = 'status'">
+                      <span class="sort_asc" ng-class="{active:predicate == 'status' && !reverse}"></span>
+                      <span class="sort_desc" ng-class="{active:predicate == 'status' && reverse}"></span>
+                  </span>
+            </div>
+            <div class="col-xs-2 text-center">Domain
+               <span class="sort" ng-click="reverse = predicate == 'role.valueText' && !reverse; predicate = 'role.valueText'">
+                      <span class="sort_asc" ng-class="{active:predicate == 'role.valueText' && !reverse}"></span>
+                      <span class="sort_desc" ng-class="{active:predicate == 'role.valueText' && reverse}"></span>
+                  </span>
+            </div>
+             <div class="col-xs-2 padzero text-center">Version
+                   <span class="sort" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'">
+                      <span class="sort_asc" ng-class="{active:predicate == 'name' && !reverse}"></span>
+                      <span class="sort_desc" ng-class="{active:predicate == 'name' && reverse}"></span>
+                  </span>
+                </div>
+
+            <div class="col-xs-2 text-center"><i class="fa fa-cog"></i></div>
+          </div>
+          <div class="table-tbody">
+            <div class="row table-item">
+              <div class="col-xs-3"><i class="fa fa-cube"></i> User Management</div>
+              <div class="col-xs-3 text-center">Published - Active</div>
+              <div class="col-xs-2  text-center">Administration</div>
+              <div class="col-xs-2 text-center">0</div>
+              <div class="col-xs-2 text-center"><span class="o_edit"><i class="fa fa-edit"></i></span><span class="o_settings"><i class="fa fa-cog"></i></span></div>
+            </div>
+            <div class="row table-item">
+              <div class="col-xs-3"><i class="fa fa-cube"></i> Interface</div>
+              <div class="col-xs-3 text-center">Published - Active</div>
+              <div class="col-xs-2  text-center">Administration</div>
+              <div class="col-xs-2 text-center">1</div>
+              <div class="col-xs-2 text-center"><span class="o_edit"><i class="fa fa-edit"></i></span><span class="o_settings"><i class="fa fa-cog"></i></span></div>
+            </div>
+            <div class="row table-item">
+              <div class="col-xs-3"><i class="fa fa-cube"></i> Support Requests</div>
+              <div class="col-xs-3 text-center">Published - Active</div>
+              <div class="col-xs-2  text-center">Support</div>
+              <div class="col-xs-2 text-center">1.1</div>
+              <div class="col-xs-2 text-center"><span class="o_edit"><i class="fa fa-edit"></i></span><span class="o_settings"><i class="fa fa-cog"></i></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-right tab-back bleft full_height">
+
+        <div class="dash-right-row">
+                    <div class="row-title">FILTERS</div>
+         </div>
+
+        <div class="filter_list_item">
+
+
+          <div class="notice notice-info">
+            <strong>Filter 1</strong>
+            <div class="notice-content">Content 1
+                <div class="op_btns_section">
+                    <span class="op_btns op_edit"><i class="fa fa-edit"></i></span>
+                    <span class="op_btns op_save"><i class="fa fa-save"></i></span>
+                    <span class="op_btns op_del"><i class="fa fa-trash-o"></i></span>
+                </div>
+            </div>
+
+          </div>
+           <div class="notice notice-info">
+            <strong>Filter 2</strong>
+            <div class="notice-content">Content 2
+                <div class="op_btns_section">
+                    <span class="op_btns op_edit"><i class="fa fa-edit"></i></span>
+                    <span class="op_btns op_save"><i class="fa fa-save"></i></span>
+                    <span class="op_btns op_del"><i class="fa fa-trash-o"></i></span>
+                </div>
+                </div>
+          </div>
+            </div>
+       <!--  <div class="filter-section pull-left">
+          <div class="btn-group filter-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-filter"></i> Filter Name <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Filter 1</a></li>
+              <li><a href="#">Filter 2</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pull-right filter-close"><i class="fa fa-times"></i>
+        </div>
+
+        <div class="right-tab">
+          Nav tabs
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#first" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+            <li role="presentation"><a href="#second" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+          </ul>
+
+          Tab panes
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active text-center" id="first">
+                <img src="img/comment.png" alt="">
+                <br><br>
+                Select a Filter to view its details
+            </div>
+            <div role="tabpanel" class="tab-pane" id="second">...</div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="account_popout">
+<div class="popout_img">
+<img src="img/profile.png" alt="">
+<div class="change_photo">
+    Change Photo
+</div>
+<div class="popout_profile">
+<span class="p_name">Rum N Coke</span>
+<span class="p_email">a@gmail.com</span>
+<span class="p_privacy">
+    <a href="">Account</a> - <a href="">Privacy</a>
+</span>
+<a href="" class="noPad">
+    <div class="p_btn">
+        My Account
+    </div>
+</a>
+</div>
+
+
+</div>
+<div class="p_signout">
+<a href="" class="noPad">
+    <div class="p_signout_btn">Sign out</div>
+</a>
+<div class="clearfix"></div>
+</div>
+</div>
+
+
+
+
+
+<script>
+$(document).ready(function(){
+
+   $(document).on('click','.pm-filter',function(){
+       $('.filter_section').slideToggle();
+
+   });
+
+    $(document).on('click','.notice',function(){
+       $(this).find('.notice-content').slideToggle();
+
+   });
+
+});
+</script>
