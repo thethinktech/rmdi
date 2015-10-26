@@ -962,3 +962,11 @@ img.user-logo {
     cursor: pointer;
 }
 
+/* SUPER ADMIN */
+
+.o_edit,.o_settings{
+ cursor: pointer;
+}
+.o_settings{
+        margin-left: 10px
+}

@@ -1,7 +1,7 @@
-define(['angularAMD'], 
+define(['angularAMD'],
     function(angularAMD) {
     'use strict';
-	return ['$routeProvider', function($routeProvider) {
+    return ['$routeProvider', function($routeProvider) {
 
         //Client Admin Module Routes
         $routeProvider.when('/login', angularAMD.route({
@@ -40,7 +40,7 @@ define(['angularAMD'],
             controllerUrl: 'modules/clientAdmin/dashboard/profileManagement/profileBuilder/profileBuilderCtrl'
         }));
 
-        
+
 
         //User Module Routes
         $routeProvider.when('/user', angularAMD.route({
@@ -55,7 +55,20 @@ define(['angularAMD'],
             controller: 'SuperAdminCtrl',
             controllerUrl: 'modules/superAdmin/superAdminCtrl'
         }));
-        
+
+
+         $routeProvider.when('/superadmin/configureobjectgrid', angularAMD.route({
+            templateUrl: 'scripts/modules/superAdmin/configureObjectGrid.html',
+            controller: 'configureObjectGridCtrl',
+            controllerUrl: 'modules/superAdmin/configureObjectGridCtrl'
+        }));
+
+         $routeProvider.when('/superadmin/sousermanagement', angularAMD.route({
+            templateUrl: 'scripts/modules/superAdmin/systemObjectUserManagement.html',
+            controller: 'systemObjectUserManagementCtrl',
+            controllerUrl: 'modules/superAdmin/systemObjectUserManagementCtrl'
+        }));
+
         $routeProvider.otherwise({redirectTo: '/login'});
-	}]
+    }]
 });
