@@ -970,3 +970,54 @@ img.user-logo {
 .o_settings{
         margin-left: 10px
 }
+
+
+/*
+.step_item{
+ float: left;
+ width:50px;
+    text-align: center
+}
+
+.step_circle{
+        width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    outline: none
+}
+
+.step_circle.on{
+    background-color: #449d44;
+    border-color: #398439;
+    outline: none
+}
+.step_circle:focus,.step_circle:active{
+    outline: none
+}
+.step_divider{
+        border-top: 1px dashed #ccc;
+    float: left;
+    width: 50px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.sub_steps{
+ width: 100%;
+    margin-top: 20px
+}
+
+.step_txt {
+    margin-top: 10px;
+    color: #777;
+}
+*/
+.panel-title{
+ cursor: pointer
+}
+.bigToggle{
+        width: 174px;
+    border: 1px solid #a9a9a9;
+}
