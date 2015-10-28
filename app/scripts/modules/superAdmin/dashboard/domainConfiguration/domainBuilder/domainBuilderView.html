@@ -1,0 +1,612 @@
+    <div class="main dash-main">
+    <div class="container-fluid noPad ">
+        <div class="container dash-top">
+            <div class="dash-left"><img src="img/logo.png" alt="" class="page-logo"></div>
+            <div class="dash-mid">
+                <div class="input-group search-group">
+                    <input type="text" class="form-control" placeholder="Search Name">
+                    <button class="input-group-addon"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="dash-right">
+                <div class="profile-right">
+                    <div class="profile-item text-center">Admin</div>
+                    <div class="profile-item text-center"><i class="fa fa-th"></i></div>
+                    <div class="profile-item text-center"><span class="profile-notif"><i class="fa fa-bell"></i></span></div>
+                    <div class="profile-item text-center img-circle profile-img"><img src="img/profile.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid noPad ">
+        <div class="container dash-second">
+            <div class="dash-left"><img src="img/profile.png" alt="" class="user-logo">
+                <h4 class="user-name">UM</h4>
+            </div>
+            <div class="profile-crumb">
+                <div id="bc1" class="btn-group btn-breadcrumb">
+                    <a href class="btn btn-info" ng-class="{'on': currentTab == 1}" ng-click="currentTab=1">
+                        <div>Basic Data</div>
+                    </a>
+                    <a href class="btn btn-info" ng-class="{'on': currentTab == 2}" ng-click="currentTab=2">
+                        <div>Validate</div>
+                    </a>
+                    <a href class="btn btn-info" ng-class="{'on': currentTab == 3}" ng-click="currentTab=3">
+                        <div>Approve</div>
+                    </a>
+                    <a href class="btn btn-info" ng-class="{'on': currentTab == 4}" ng-click="currentTab=4">
+                        <div>Publish</div>
+                    </a>
+
+                </div>
+                <div class="profile_right_btn pull-right">
+                    <button class="btn btn-default btn-sm btn-flat" ng-disabled="currentTab != 4">Validate</button>
+                    <button class="btn btn-default btn-sm btn-flat" ng-disabled="currentTab != 4">Review & Approve</button>
+                    <button class="btn btn-warning btn-sm btn-flat" ng-disabled="currentTab != 5" ng-click="openStatusModal()">Publish</button>
+                    <button class="btn btn-success btn-sm btn-flat" ng-click="saveProfile()">Save</button>
+                    <button class="btn btn-danger btn-sm btn-flat">Cancel</button>
+                    <button class="btn btn-default btn-sm btn-flat"><i class="fa fa-refresh"></i></button>
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-flat btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href>Action</a></li>
+                            <li><a href>Another action</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-flat btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cog"></i> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid noPad ">
+        <div class="container dash-bottom">
+            <div class="dash-left profile_drags noBorder">
+                    <!-- LEFT SIDEBAR -->
+            </div>
+            <div class="profile-content bleft">
+
+                <!-- PAGE 1 CONTENT STARTS -->
+                <div id="page1" class="hide" ng-class="{'show': currentTab == 1}">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <h4 class="panel-title">
+
+     1 General
+
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+         <h3>Step 1 - General</h3>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Profile Name*:</h4></div>
+                        <div class="col-xs-10"><h4><input type="text" ng-model="profileBuilderObj.name"/></h4></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Open Form*: </h4></div>
+                        <div class="col-xs-10"><h4>On Click – New Button on User Management</h4></div>
+                    </div>
+                     <div class="row">
+                        <div class="col-xs-2"><h4>Shortcut*:      </h4></div>
+                        <div class="col-xs-1"><h4>UM01</h4></div>
+                        <div class="col-xs-2">
+                          <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-flat btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Please Select <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Object*: </h4></div>
+                        <div class="col-xs-10"><h4>System_Object_Users</h4></div>
+                    </div>
+                      <div class="row">
+                        <div class="col-xs-2"><h4>Hot Key*: </h4></div>
+                        <div class="col-xs-10"><h4>Ctrl+Alt+Del</h4></div>
+                    </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+      <h4 class="panel-title">
+
+     2 Access & Security
+
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+         <h3>Step 2 - Access & Security</h3>
+                       <div class="row">
+                            <div class="col-xs-12">
+                                <h4><strong>1) Authentication Settings</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                                <p><label><input type="radio"> RDP to authenticate</label></p>
+                                <p><label><input type="radio"> Single Sign-On (Exchange)</label></p>
+                                <p><label><input type="radio"> Single Sign-On (Windows)</label></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4><strong>2) Password Management Settings</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                                <p><label><input type="radio"> Expiry Rules</label></p>
+                                <p><label><input type="radio"> Password rest rules (can end-users re-set their own password))</label></p>
+                                <p><label><input type="radio"> Password Attempts and Account Access Security Rule</label></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <h4><strong>2) Timeout (in minutes)</strong></h4>
+                            </div>
+                            <div class="col-xs-8 profile_boxes">
+                                <input type="text">
+                            </div>
+                        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+      <h4 class="panel-title">
+
+     3 Workflow Setting
+
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+         <h3>Step 3 - Workflow</h3>
+                       <div class="row">
+                            <div class="col-xs-12">
+                                <h4><strong>Select from available workflow</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                                <p><label><input type="radio"> Manual User Creation Workflow*:</label></p>
+                                <p><label><input type="radio"> Self-registration Workflow*:</label></p>
+                                <p><label><input type="radio"> Internal Access Request Workflow*:</label></p>
+                            </div>
+                        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+      <h4 class="panel-title">
+
+     3 Notifications
+
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+         <h3>Step 4 - Notification</h3>
+                       <div class="row">
+                            <div class="col-xs-12">
+                                <h4><strong>Login Notification (All Users):</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                               <div class="row">
+                                   <div class="col-xs-2"><label>a) Start Date/Time*: </label></div>
+                                   <div class="col-xs-10"><input type="text"></div>
+                               </div>
+                               <br>
+                               <div class="row">
+                                   <div class="col-xs-2"><label>b) End Date/Time*: </label></div>
+                                   <div class="col-xs-10"><input type="text"></div>
+                               </div>
+                               <br>
+                               <div class="row">
+                                   <div class="col-xs-2"><label>c) Message*: </label></div>
+                                   <div class="col-xs-10"><input type="text"></div>
+                               </div>
+
+
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4><strong>Role based Notification:</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                               <div class="row">
+                                   <div class="col-xs-2"><label>a) Start Date/Time*: </label></div>
+                                   <div class="col-xs-10"><input type="text"></div>
+                               </div>
+                               <br>
+                               <div class="row">
+                                   <div class="col-xs-2"><label>b) End Date/Time*: </label></div>
+                                   <div class="col-xs-10"><input type="text"></div>
+                               </div>
+                               <br>
+                                <div class="row">
+                                   <div class="col-xs-2"><label>b) Select Roles*: </label></div>
+                                   <div class="col-xs-10"><div class="btn-group">
+                                <button type="button" class="btn btn-default btn-flat btn-sm dropdown-toggle bigToggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Please Select <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                </ul>
+                            </div></div>
+                               </div>
+                               <br>
+                               <div class="row">
+                                   <div class="col-xs-2"><label>c) Message*: </label></div>
+                                   <div class="col-xs-10"><input type="text"></div>
+                               </div>
+
+
+                            </div>
+                        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+                </div>
+                <!-- PAGE 1 CONTENT ENDS -->
+
+
+                <!-- PAGE 2 CONTENT STARTS-->
+                <div id="page2" class="hide" ng-class="{'show': currentTab == 2}">
+                 <h3>Validate</h3>
+                    <br>
+                    <table class="table table-bordered step3-table">
+                        <thead>
+                            <tr>
+                                <th>Area/Section</th>
+                                <th>Field</th>
+                                <th>Error Message</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>General</td>
+                                <td>Form Name</td>
+                                <td>Missing</td>
+                                <td><a href="">Click Here</a></td>
+                            </tr>
+                            <tr>
+                                <td>Access & Security</td>
+                                <td>Timeout Settings</td>
+                                <td>Missing</td>
+                                <td><a href="">Click Here</a></td>
+                            </tr>
+                            <tr>
+                                <td>General</td>
+                                <td>Form Name</td>
+                                <td>Missing</td>
+                                <td><a href="">Click Here</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- PAGE 2 CONTENT ENDS-->
+
+
+                <!-- PAGE 3 CONTENT STARTS -->
+                <div id="page3" class="hide" ng-class="{'show': currentTab == 3}">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFive" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+      <h4 class="panel-title">
+
+     1 General
+
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+      <div class="panel-body">
+         <h3>Step 1 - General</h3>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Profile Name*:</h4></div>
+                        <div class="col-xs-10"><h4><input type="text" ng-model="profileBuilderObj.name"/></h4></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Open Form*: </h4></div>
+                        <div class="col-xs-10"><h4>On Click – New Button on User Management</h4></div>
+                    </div>
+                     <div class="row">
+                        <div class="col-xs-2"><h4>Shortcut*:      </h4></div>
+                        <div class="col-xs-1"><h4>UM01</h4></div>
+                        <div class="col-xs-2">
+                          <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-flat btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Please Select <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Object*: </h4></div>
+                        <div class="col-xs-10"><h4>System_Object_Users</h4></div>
+                    </div>
+                      <div class="row">
+                        <div class="col-xs-2"><h4>Hot Key*: </h4></div>
+                        <div class="col-xs-10"><h4>Ctrl+Alt+Del</h4></div>
+                    </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingSix" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+      <h4 class="panel-title">
+
+     2 Access & Security
+
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSix">
+      <div class="panel-body">
+         <h3>Step 2 - Access & Security</h3>
+                       <div class="row">
+                            <div class="col-xs-12">
+                                <h4><strong>1) Authentication Settings</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                                <p><label><input type="radio"> RDP to authenticate</label></p>
+                                <p><label><input type="radio"> Single Sign-On (Exchange)</label></p>
+                                <p><label><input type="radio"> Single Sign-On (Windows)</label></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4><strong>2) Password Management Settings</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                                <p><label><input type="radio"> Expiry Rules</label></p>
+                                <p><label><input type="radio"> Password rest rules (can end-users re-set their own password))</label></p>
+                                <p><label><input type="radio"> Password Attempts and Account Access Security Rule</label></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <h4><strong>2) Timeout (in minutes)</strong></h4>
+                            </div>
+                            <div class="col-xs-8 profile_boxes">
+                                <input type="text">
+                            </div>
+                        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+                </div>
+                <!-- PAGE 3 CONTENT ENDS -->
+
+
+                <!-- PAGE 4 CONTENT STARTS -->
+                <div id="page4" class="hide" ng-class="{'show': currentTab == 4 || currentTab == 5}">
+
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingSeven" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+      <h4 class="panel-title">
+
+     1 General
+
+      </h4>
+    </div>
+    <div id="collapseSeven" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSeven">
+      <div class="panel-body">
+         <h3>Step 1 - General</h3>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Profile Name*:</h4></div>
+                        <div class="col-xs-10"><h4><input type="text" ng-model="profileBuilderObj.name"/></h4></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Open Form*: </h4></div>
+                        <div class="col-xs-10"><h4>On Click – New Button on User Management</h4></div>
+                    </div>
+                     <div class="row">
+                        <div class="col-xs-2"><h4>Shortcut*:      </h4></div>
+                        <div class="col-xs-1"><h4>UM01</h4></div>
+                        <div class="col-xs-2">
+                          <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-flat btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Please Select <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2"><h4>Object*: </h4></div>
+                        <div class="col-xs-10"><h4>System_Object_Users</h4></div>
+                    </div>
+                      <div class="row">
+                        <div class="col-xs-2"><h4>Hot Key*: </h4></div>
+                        <div class="col-xs-10"><h4>Ctrl+Alt+Del</h4></div>
+                    </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingEight" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+      <h4 class="panel-title">
+
+     2 Access & Security
+
+      </h4>
+    </div>
+    <div id="collapseEight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingEight">
+      <div class="panel-body">
+         <h3>Step 2 - Access & Security</h3>
+                       <div class="row">
+                            <div class="col-xs-12">
+                                <h4><strong>1) Authentication Settings</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                                <p><label><input type="radio"> RDP to authenticate</label></p>
+                                <p><label><input type="radio"> Single Sign-On (Exchange)</label></p>
+                                <p><label><input type="radio"> Single Sign-On (Windows)</label></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4><strong>2) Password Management Settings</strong></h4>
+                            </div>
+                            <div class="col-xs-12 profile_boxes">
+                                <p><label><input type="radio"> Expiry Rules</label></p>
+                                <p><label><input type="radio"> Password rest rules (can end-users re-set their own password))</label></p>
+                                <p><label><input type="radio"> Password Attempts and Account Access Security Rule</label></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <h4><strong>2) Timeout (in minutes)</strong></h4>
+                            </div>
+                            <div class="col-xs-8 profile_boxes">
+                                <input type="text">
+                            </div>
+                        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
+                </div>
+                <!-- PAGE 4 CONTENT ENDS -->
+
+            </div>
+
+
+            <div class="nxt_prev_container"><button class="btn btn-info btn-flat">Previous</button> <button class="btn btn-info btn-flat">Next</button></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="account_popout">
+<div class="popout_img">
+<img src="img/profile.png" alt="">
+<div class="change_photo">
+    Change Photo
+</div>
+<div class="popout_profile">
+<span class="p_name">Rum N Coke</span>
+<span class="p_email">a@gmail.com</span>
+<span class="p_privacy">
+    <a href="">Account</a> - <a href="">Privacy</a>
+</span>
+<a href="" class="noPad">
+    <div class="p_btn">
+        My Account
+    </div>
+</a>
+</div>
+
+
+</div>
+<div class="p_signout">
+<a href="" class="noPad">
+    <div class="p_signout_btn">Sign out</div>
+</a>
+<div class="clearfix"></div>
+</div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+    $(document).on('click','.step3-table td',function(e){
+        if($(this).find('.edit_input').length==0){
+            var $this=$(this),
+                $val=$this.text();
+                $this.html('<input type="text" class="edit_input">');
+            $this.find('.edit_input').val($val).focus();
+            //alert($val);
+        }
+
+    });
+
+    $(document).on('keyup','.edit_input',function (e) {
+            if (e.keyCode == 13) {
+                var $val=$(this).val(),
+                    $parent=$(this).parent('td');
+                $(this).remove();
+              //  alert($val);
+               $parent.text($val);
+            }
+});
+
+});
+</script>

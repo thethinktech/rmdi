@@ -1,7 +1,7 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('SuperAdminCtrl',['$scope',
+  app.controller('SuperAdminDashboardCtrl',['$scope',
 	function ($scope) {
 
 	}]);
