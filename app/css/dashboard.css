@@ -1021,3 +1021,7 @@ img.user-logo {
         width: 174px;
     border: 1px solid #a9a9a9;
 }
+.fa_icons{
+    /* color:#888; */
+    font-size: 50px
+}
