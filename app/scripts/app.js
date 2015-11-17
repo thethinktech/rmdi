@@ -17,7 +17,8 @@ define([
         'angular-md5',
         'ngDraggable',
         'ui.bootstrap',
-        'ngTagsInput'
+        'ngTagsInput',
+        'color.picker'
     ]);
 
     app.config(routes);

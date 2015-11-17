@@ -16,7 +16,9 @@ require.config({
 		angularMd5: '../bower_components/angular-md5/angular-md5',
 		draggable: '../bower_components/ngDraggable/ngDraggable',        //Ref : https://github.com/fatlinesofcode/ngDraggable
 		UIBootstrap: '../bower_components/angular-bootstrap/ui-bootstrap-tpls',
-		ngTagInput: '../bower_components/ng-tags-input/ng-tags-input'				//Ref : http://mbenford.github.io/ngTagsInput/
+		ngTagInput: '../bower_components/ng-tags-input/ng-tags-input',				//Ref : http://mbenford.github.io/ngTagsInput/
+		tinycolor: '../bower_components/tinycolor/tinycolor',
+		angularColorPicker: 'vendor/angularjs-color-picker'							//Ref: http://angular-js.in/angular-color-picker/
 	},
 	waitSeconds:600,
 	shim: {
@@ -46,6 +48,9 @@ require.config({
 		},
 		'ngTagInput' : {
 			deps: ['angular']
+		},
+		'angularColorPicker' : {
+			deps: ['angular','tinycolor','bootstrap']
 		}
 	},
 	priority: [

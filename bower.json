@@ -21,6 +21,7 @@
     "angular-md5": "~0.1.7",
     "ngDraggable" : "latest",
     "angular-bootstrap" : "latest",
-    "ng-tags-input" : "latest"
+    "ng-tags-input" : "latest",
+    "angularjs-color-picker" : "latest"
   }
 }

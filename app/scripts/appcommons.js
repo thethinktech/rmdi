@@ -3,6 +3,7 @@ define(['angular',
     'angularRoute',
     'angularMocks',
     'underscore',
+    'tinycolor',
     'common/directives',
     'common/filters',
     'common/services',
@@ -12,7 +13,8 @@ define(['angular',
     'angularMd5',
     'draggable',
     'UIBootstrap',
-    'ngTagInput'
+    'ngTagInput',
+    'angularColorPicker'
     ], 
     function (angular, angularAMD, angularRoute, angularMocks) {
         'use strict';

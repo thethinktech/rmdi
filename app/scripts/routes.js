@@ -56,6 +56,12 @@ define(['angularAMD'],
             controllerUrl: 'modules/superAdmin/dashboard/superAdminDashboardCtrl'
         }));
 
+        $routeProvider.when('/sadashboard/themebuilder', angularAMD.route({
+            templateUrl: 'scripts/modules/superAdmin/dashboard/themeBuilderView.html',
+            controller: 'ThemeBuilderCtrl',
+            controllerUrl: 'modules/superAdmin/dashboard/themeBuilderCtrl'
+        }));
+
         $routeProvider.when('/sadashboard/domainconfig', angularAMD.route({
             templateUrl: 'scripts/modules/superAdmin/dashboard/domainConfiguration/domainConfigurationView.html',
             controller: 'DomainConfigurationCtrl',
