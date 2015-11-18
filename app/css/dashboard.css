@@ -1025,3 +1025,20 @@ img.user-logo {
     /* color:#888; */
     font-size: 50px
 }
+
+
+
+/* REMOVE THIS PORTION */
+
+.tbr_mid{
+	width: 90%;
+	padding-left: 5%;
+	margin-bottom: 10px;
+}
+.tbr_mid .tab_content_container{
+	border:0;
+}
+.tbr_cmid{
+	width:75%;
+}
+/* REMOVE ENDS */
