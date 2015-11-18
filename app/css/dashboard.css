@@ -1042,3 +1042,34 @@ img.user-logo {
 	width:75%;
 }
 /* REMOVE ENDS */
+
+
+.color_picker_main{
+margin-top: 50px;
+
+min-height: 100px;
+padding: 20px;
+border-radius: 2px;
+padding-bottom: 50px;
+ border-color: rgba(84,84,84, .13);
+    box-shadow: inset #f0f0f0 1px 1px 4px 1px;
+    background-color: #fbfbfb;
+    color: #545454;
+}
+.color_picker_main h3{
+	color:#428bca;
+}
+.cpicker_input{
+	    width: 200px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+.theme_save_btn{
+	    margin-top: 20px;
+    width: 100%;
+}
+.color_picker_main .cpicker_label {
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
