@@ -13,6 +13,7 @@ define(['app'], function (app) {
 		var init = function(){
 
 			$scope.usersList =  UTILS.getFromLocalStorage("usersList");
+            $scope.selectedOption = UTILS.getFromSession("selectedOption");
 			// ADMIN.getUsers()
 			// .success(function(data,status,headers,config){
 			// 	if(data){

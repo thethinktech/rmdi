@@ -24,9 +24,13 @@ define([
     app.config(routes);
     app.config(interceptor);
     
-    /*app.run(['$rootScope','COMMONSTORE',function($rootScope,COMMONSTORE){
-        
-    }]);*/
+    app.run(['$rootScope','UTILS',function($rootScope,UTILS){
+        $rootScope.theme = {};
+        $rootScope.theme.themeColor =  UTILS.getFromLocalStorage("themeColor");
+        if(!$rootScope.theme.themeColor){
+            $rootScope.theme.themeColor = '#FFFFFF';
+        }
+    }]);
 
     return angularAMD.bootstrap(app);
 });

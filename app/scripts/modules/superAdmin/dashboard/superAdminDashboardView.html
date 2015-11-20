@@ -7,18 +7,18 @@
                 <div class="left-home pull-left"><i class="fa fa-home"></i></div>
                 <div class="mid-breadcrumb pull-left">
                     <ul class="crumb">
-                        <li><a href="">Home</a></li>
+                        <li><a href="" ng-style="{'color' : theme.themeColor}">Home</a></li>
                         <!-- <li class="seperator"><i class="fa fa-chevron-right"></i></li> -->
-                        <li ><a href="supply_chain" class="tab_handle active"><i class="fa fa-cogs"></i> Configuration</a></li>
-                        <li><a href="hr" class="tab_handle"><i class="fa fa-cog"></i> Admin </a></li>
-                        <li><a href="finance" class="tab_handle"><i class="fa fa-th"></i> Support </a></li>
+                        <li><a href="supply_chain" class="tab_handle active" showtab><i class="fa fa-cogs"></i> Configuration</a></li>
+                        <li><a href="hr" ng-style="{'color' : theme.themeColor}" class="tab_handle" showtab><i class="fa fa-cog"></i> Admin </a></li>
+                        <li><a href="finance" ng-style="{'color' : theme.themeColor}" class="tab_handle" showtab><i class="fa fa-th"></i> Support </a></li>
                     </ul>
                 </div>
 
                 <div class="dash-right pull-right">
                     <div class="row right-settings">
                         <div class="col-xs-6 text-right">
-     <div class="filter-section filter-date">
+                            <div class="filter-section filter-date">
                             <div class="btn-group filter-group">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Aug 6, 2015 <span class="caret"></span>
@@ -78,7 +78,7 @@
 
                      <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="">
+                            <a href="" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                     <span class="fa_icons"><i class="fa fa-certificate"></i></span>
                                 </div>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="#/sadashboard/domainconfig">
+                            <a href="" ng-click="goToUrl('sadashboard/domainconfig','fa fa-cubes','Domain Admin')" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                     <span class="fa_icons"><i class="fa fa-cubes"></i></span>
                                 </div>
@@ -108,7 +108,7 @@
                     </div>
                     <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="">
+                            <a href="" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                     <span class="fa_icons"><i class="fa fa-users"></i></span>
                                 </div>
@@ -123,7 +123,7 @@
                     </div>
                     <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="#/superadmin/configureobjectgrid">
+                            <a href="" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                     <span class="fa_icons"><i class="fa fa-cube"></i></span>
                                 </div>
@@ -141,7 +141,7 @@
                     <div class="row">
                     <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="">
+                            <a href="" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                     <span class="fa_icons"><i class="fa fa-chevron-right"></i></span>
                                 </div>
@@ -157,7 +157,7 @@
 
                     <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="">
+                            <a href="" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                     <span class="fa_icons"><i class="fa fa-list"></i></span>
                                 </div>
@@ -173,7 +173,7 @@
 
                     <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="">
+                            <a href="" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                     <span class="fa_icons"><i class="fa fa-file-text-o"></i></span>
                                 </div>
@@ -189,7 +189,7 @@
 
                     <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="">
+                            <a href="" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                     <span class="fa_icons"><i class="fa fa-question"></i></span>
                                 </div>
@@ -208,7 +208,7 @@
 
                         <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="">
+                            <a href="" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                    <span class="fa_icons"><i class="fa fa-shield"></i></span>
                                 </div>
@@ -224,7 +224,7 @@
 
                     <div class="col-sm-3 col-xs-2 icons-item">
                         <div class="row">
-                            <a href="#/sadashboard/themebuilder">
+                            <a href="" ng-click="goToUrl('sadashboard/themebuilder','fa fa-paint-brush','Themes & Colors')" ng-style="{'color' : theme.themeColor}">
                                 <div class="col-sm-12 text-center">
                                     <span class="fa_icons"><i class="fa fa-paint-brush"></i></span>
                                 </div>
@@ -245,7 +245,7 @@
                         <div class="row icons-left-top">
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-user"></i></span>
                             </div>
@@ -262,7 +262,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-building"></i></span>
                             </div>
@@ -278,7 +278,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-credit-card"></i></span>
                             </div>
@@ -294,7 +294,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-area-chart"></i></span>
                             </div>
@@ -310,7 +310,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-delicious"></i></span>
                             </div>
@@ -326,7 +326,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-laptop"></i></span>
                             </div>
@@ -342,7 +342,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-shield"></i></span>
                             </div>
@@ -358,7 +358,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-question-circle"></i></span>
                             </div>
@@ -467,15 +467,15 @@
 
 
 <script type="text/javascript">
-    $(document).ready(function(){
-        $(document).on('click','.tab_handle',function(e){
-            e.preventDefault();
-            var $id='#'+$(this).attr('href');
-            $('.tab_item').hide();
-            $('.tab_handle').removeClass('active');
-            $(this).addClass('active');
-            $($id).show();
-        })
+    // $(document).ready(function(){
+    //     $(document).on('click','.tab_handle',function(e){
+    //         e.preventDefault();
+    //         var $id='#'+$(this).attr('href');
+    //         $('.tab_item').hide();
+    //         $('.tab_handle').removeClass('active');
+    //         $(this).addClass('active');
+    //         $($id).show();
+    //     })
 
-    });
+    // });
 </script>

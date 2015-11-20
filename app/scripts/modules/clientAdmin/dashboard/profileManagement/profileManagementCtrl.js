@@ -12,6 +12,7 @@ define(['app'], function (app) {
 
 		var init = function(){
 			$scope.profilesList =  UTILS.getFromLocalStorage("profilesList");
+            $scope.selectedOption = UTILS.getFromSession("selectedOption");
 		};
 		init();
 		

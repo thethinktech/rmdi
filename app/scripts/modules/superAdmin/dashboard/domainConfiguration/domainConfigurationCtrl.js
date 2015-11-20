@@ -11,6 +11,7 @@ define(['app'], function (app) {
         };
 
         var init = function(){
+            $scope.selectedOption = UTILS.getFromSession("selectedOption");
         };
         init();
 

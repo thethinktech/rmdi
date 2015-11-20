@@ -1,9 +1,14 @@
 define(['app'], function (app) {
   'use strict';
 
-  app.controller('DashboardCtrl',['$scope','$location',
-	function ($scope,$location) {
+  app.controller('DashboardCtrl',['$scope','$location','UTILS',
+	function ($scope,$location,UTILS) {
 
+		$scope.goToUrl = function(url,icon,name){
+			var temp = {"name" : name,"icon" : icon};
+			UTILS.setInSession('selectedOption',temp);
+			$location.path(url);
+		};
 
 	}]);
 });

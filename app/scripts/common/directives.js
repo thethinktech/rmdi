@@ -95,16 +95,22 @@ define(['angular','common/header/headerDirective','common/footer/footerDirective
 		}
 	});
 
-	module.directive('showtab',function () {
+	module.directive('showtab',['$rootScope', function ($rootScope) {
         return {
             link: function (scope, element, attrs) {
                 element.click(function(e) {
                     e.preventDefault();
-                    $(element).tab('show');
+		            var $id='#'+$(this).attr('href');
+		            $('.tab_item').hide();
+		            $('.tab_handle').removeClass('active');
+		            $('.tab_handle').css('color',$rootScope.theme.themeColor);
+		            $(this).css("color", "");
+		            $(this).addClass('active');
+		            $($id).show();
                 });
             }
         };
-    });
+    }]);
 
 	return module;
 });

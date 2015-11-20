@@ -1,5 +1,3 @@
-
-
 <div class="main dash-main">
     <!-- Application header Start-->
     <div app-header></div>
@@ -10,10 +8,10 @@
             <div class="left-home pull-left"><i class="fa fa-home"></i></div>
             <div class="mid-breadcrumb pull-left">
                 <ul class="crumb">
-                    <li><a href="">Home</a></li>
-                    <li><a href="manage" class="tab_handle active"><i class="fa fa-reorder"></i> Manage</a></li>
-                     <li><a href="admin" class="tab_handle"><i class="fa fa-reorder"></i> Admin</a></li>
-                      <li><a href="support" class="tab_handle"><i class="fa fa-reorder"></i> Support</a></li>
+                    <li><a href="" ng-style="{'color' : theme.themeColor}">Home</a></li>
+                    <li><a href="manage" class="tab_handle active" showtab><i class="fa fa-reorder"></i> Manage</a></li>
+                     <li><a href="admin" class="tab_handle" ng-style="{'color' : theme.themeColor}" showtab><i class="fa fa-reorder"></i> Admin</a></li>
+                      <li><a href="support" class="tab_handle" ng-style="{'color' : theme.themeColor}" showtab><i class="fa fa-reorder"></i> Support</a></li>
                 </ul>
 
             </div>
@@ -72,7 +70,7 @@
 <div class="row icon_dash">
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="#/dashboard/profilemanagement">
+                        <a href="" ng-click="goToUrl('dashboard/profilemanagement','fa fa-user','Profile Management')" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                  <span class="fa_icons"><i class="fa fa-user"></i></span>
                             </div>
@@ -87,7 +85,7 @@
                 </div>
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="#/dashboard/usermanagement">
+                        <a href="" ng-click="goToUrl('dashboard/usermanagement','fa fa-users','Users')" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                  <span class="fa_icons"><i class="fa fa-users"></i></span>
                             </div>
@@ -103,7 +101,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-building"></i></span>
                             </div>
@@ -119,7 +117,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                  <span class="fa_icons"><i class="fa fa-credit-card"></i></span>
                             </div>
@@ -135,7 +133,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-area-chart"></i></span>
                             </div>
@@ -151,7 +149,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-delicious"></i></span>
                             </div>
@@ -167,7 +165,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-laptop"></i></span>
                             </div>
@@ -183,7 +181,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-shield"></i></span>
                             </div>
@@ -199,7 +197,7 @@
 
                 <div class="col-sm-3 col-xs-2 icons-item">
                     <div class="row">
-                        <a href="">
+                        <a href="" ng-style="{'color' : theme.themeColor}">
                             <div class="col-sm-12 text-center">
                                 <span class="fa_icons"><i class="fa fa-question-circle"></i></span>
                             </div>
