@@ -126,6 +126,13 @@ img.user-logo {
     margin-top: 10px;
     float:left
 }
+.dash-second .c_icon {
+    font-size:26px;
+    display: block;
+    float:left;
+     margin-top: 10px;
+
+}
  .user-name{
     float:left;
    margin-top: 16px;
@@ -1031,15 +1038,15 @@ img.user-logo {
 /* REMOVE THIS PORTION */
 
 .tbr_mid{
-	width: 90%;
-	padding-left: 5%;
-	margin-bottom: 10px;
+    width: 90%;
+    padding-left: 5%;
+    margin-bottom: 10px;
 }
 .tbr_mid .tab_content_container{
-	border:0;
+    border:0;
 }
 .tbr_cmid{
-	width:75%;
+    width:75%;
 }
 /* REMOVE ENDS */
 
@@ -1057,15 +1064,15 @@ padding-bottom: 50px;
     color: #545454;
 }
 .color_picker_main h3{
-	color:#428bca;
+    color:#428bca;
 }
 .cpicker_input{
-	    width: 200px;
+        width: 200px;
     margin: 0 auto;
     margin-top: 35px;
 }
 .theme_save_btn{
-	    margin-top: 20px;
+        margin-top: 20px;
     width: 100%;
 }
 .color_picker_main .cpicker_label {
